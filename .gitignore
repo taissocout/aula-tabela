@@ -1,0 +1,126 @@
+####################################
+# 🔐 SECURITY - OWASP TOP 10 INSPIRED
+####################################
+
+# Environment variables (A02: Cryptographic Failures)
+.env
+.env.*
+*.env
+
+# API keys, tokens, secrets (A02, A05)
+*.key
+*.pem
+*.crt
+*.pfx
+*.keystore
+secrets.*
+credentials.*
+tokens.*
+apikeys.*
+
+####################################
+# 🧠 CONFIG & LOCAL SETTINGS
+####################################
+
+# Local configuration files
+config.local.*
+config.dev.*
+settings.local.*
+
+####################################
+# 🗃️ DEPENDENCIES
+####################################
+
+# Node.js
+node_modules/
+
+# Python
+venv/
+.env/
+__pycache__/
+*.pyc
+
+# PHP
+vendor/
+
+####################################
+# 🧪 LOGS & DEBUG FILES (A09)
+####################################
+
+*.log
+logs/
+debug.log
+error.log
+
+####################################
+# 🧾 DATABASE & BACKUPS (A05)
+####################################
+
+*.sql
+*.sqlite
+*.db
+*.dump
+backup/
+backups/
+
+####################################
+# 🖥️ OS & EDITOR FILES
+####################################
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# JetBrains (PhpStorm, WebStorm, etc)
+.idea/
+
+####################################
+# 📦 BUILD & DIST FILES
+####################################
+
+dist/
+build/
+out/
+
+####################################
+# 🧠 CACHE FILES
+####################################
+
+.cache/
+.tmp/
+.temp/
+
+####################################
+# 📸 SENSITIVE FILE TYPES
+####################################
+
+*.zip
+*.tar
+*.gz
+*.rar
+
+####################################
+# 🔍 TEST & REPORT FILES
+####################################
+
+coverage/
+reports/
+test-results/
+
+####################################
+# 🔐 AUTH & SESSION FILES (A07)
+####################################
+
+*.session
+*.cookie
+*.auth
