@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Input Text</h1>
+  <label for="name">Nome</label>
+  <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+  <br><br>
+  <label for="email">Email</label>
+  <input type="text" name="email" id="email" placeholder="Digite seu email" required>
+
+  <!--
+      value = Algum valor padrão descrito no campo ja preenchido importante para quando for passado para o backender, importante ter para saber o valor que sera passado no input
+      id = campo para 
+      placeholder = Descrição marcada dentro do campo
+      required = atributo para requerir o campo preenchido corretamente 
+      -->
+
+  <br>
+  <h1>Number - Password - Submit</h1>
+  <label for="numero">Numero</label>
+  <input type="number" name="" id="">
+  <br><br>
+  <label for="senha">Password</label>
+  <input type="password" id="password" placeholder="Digite sua senha" required>
+  <br><br>
+  <input type="submit" value="Salvar" id="salvar">
+  <!--Colocando inputs, number, password e submit-->
+  <br><br>
+  <h1>ChackBox, Radio</h1>
+
+  <label for="c#">C#</label>
+  <input type="checkbox" name="Linguagens" id="c#" checked>
+  <br>
+  <label for="javaScript">Javascript</label>
+  <input type="checkbox" name="Linguagens" id="javaScript">
+  <br>
+  <label for="Python">Python</label>
+  <input type="checkbox" name="Linguagens" id="Python">
+  <!--
+  Checked = ja vem marcado um objeto quando atualiza a pagina
+  -->
+  <br>
+  <br>
+  <h3>Gênero</h3>
+  <label for="masculino">Masculino</label>
+  <input type="radio" name="genero" id="masculino" checked>
+  <label for="feminino">Feminino</label>
+  <input type="radio" name="genero" id="feminino">
+  <br><br>
+  <h1>Select</h1>
+
+  <label for="filmes">Filmes</label>
+  <select name="filmes" id="filmes">
+    <option value="">Selecione um Filme</option>
+    <option value="Homem Aranha">Homem Aranha</option>
+    <option value="Doutro Estranho">Doutro Estranho</option>
+    <option value="Dead Pool">Dead Pool</option>
+    <option value="Vingadores">Vingadores</option>
+  </select>
+  <!--
+  Atributo "multiple" se adicionado você consegue selecionar diversos itens no menu
+  -->
+  <br><br>
+  <h1>Textarea</h1>
+
+  <textarea name="texto" id="texto" cols="50" rows="15">
+  Lorem Ipsum é simplesmente uma simulação de texto da indústria de impressão e composição. Lorem Ipsum tem sido a simulação de texto padrão da indústria desde os anos 1500, quando um impressor desconhecido pegou uma bandeja de tipos e a embaralhou para fazer um livro de modelos de tipos. Sobreviveu não apenas cinco séculos, mas também o salto para a composição eletrônica, permanecendo essencialmente inalterado. Foi popularizada na década de 1960 com o lançamento de folhas de Letraset contendo passagens de Lorem Ipsum, e mais recentemente com softwares de editoração eletrônica como o Aldus PageMaker, incluindo versões do Lorem Ipsum.
+</textarea>
+  <br><br>
+
+  <h1>Button</h1>
+  <label for="botão normal">botão normal</label>
+  <button style="width: 200px; height: 40px; text-align: center; font-size: 20px;">
+    Normal
+  </button>
+  <br><br>
+  <label for="com imput">Com Input</label>
+  <input type="button" value="Com Input" onclick="alert('Clicou')"
+    style="width: 200px; height: 40px; text-align: center; font-size: 20px;">
+
+  <br><br>
+  <h1>FORMULARIO COMPLETO</h1>
+
+  <form action="http://www.google.com.br" method="GET">
+    <input type="text" name="VALOR" id="" value="GET">
+    <input type="submit">
+  </form>
+  <br><br>
+  <form action="http://www.google.com.br" method="POST">
+    <input type="text" name="VALOR" id="" value="POST">
+    <input type="submit">
+  </form>
+
+  <!--Methods 
+  GET = vai enviar o valor na url
+  POST = vai enviar de uma forma segura o valor para o banco de dados
+  -->
+
+  <h3>Formulario de login no Facebook</h3>
+  <form action="" method="GET" enctype="multipart/form-data" </form><!--add enctype no por termos add o input file-->
+    <input type="text" name="nome" id="nome" placeholder="Nome"><br>
+    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome"><br>
+    <input type="text" name="celular-ou-email" id="celular-ou-email" placeholder="E-mail ou Celular"><br>
+    <input type="password" name="senha" id="senha" placeholder="Nova senha">
+    <br>
+    <label>Data de Nascimento</label><br>
+    <select name="dia" id="dia">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <select name="mes" id="mes">
+      <option value="jan">jan</option>
+      <option value="fev">fev</option>
+      <option value="mar">mar</option>
+      <option value="abr">abr</option>
+      <option value="mai">mai</option>
+    </select>
+    <select name="ano" id="ano">
+      <option value="2000">2000</option>
+      <option value="2001">2001</option>
+      <option value="2002">2002</option>
+      <option value="2003">2003</option>
+      <option value="2004">2004</option>
+    </select>
+    <br>
+    <label>Gênero</label><br>
+    <label for="Masculino">Masculino</label>
+    <input type="radio" name="genero" id="Masculino" value="Masculino" checked>
+
+    <label for="Feminino">Feminino</label>
+    <input type="radio" name="genero" id="Feminino" value="Feminino">
+
+    <label for="Personalizado">Personalizado</label>
+    <input type="radio" name="genero" id="Personalizado" value="Personalizado"><br>
+
+    <input type="submit" value="Cadastrar"><br><br>
+
+    <input type="file" name="arquivo"
+      id="arquivo"><!--Toda vez que add esse input temos que add tambêm enctype multpart no fomrulario-->
+  </form>
+
+  <br><br>
+
+  <header>
+    <!--Podemos te mais de uma header no site, porem não é tão inteligente de usar mais de uma, o mecanismo de busca vai achar ele pelo  SEO como cabeçalho-->
+    <h1>Tags Semantica</h1>
+    <nav>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/sobre">Sobre</a></li>
+        <li><a href="/portifolio">Portifólio</a></li>
+        <li><a href="/contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!--assim como a header a main não é interessante usar mais de uma, pois aqui sera colocado conteudo principal da pagina-->
+    <section>
+      <article>
+        <h2>C#</h2>
+        <p>C# é muito legal</p>
+      </article>
+      <article>
+        <h2>Javascript</h2>
+        <p>Javscript é uma linguagem de frontend e backend com o node.js</p>
+      </article>
+
+      <h2>modulo HTML Intermediario</h2>
+      <img src="logo-html.jpg">
+      <p>Esse modulo é o sobre do HTML Intermediario</p>
+    </section>
+
+    <aside>
+      <ul>
+        <li><a href="">blog</a></li>
+        <li><a href="">site</a></li>
+        <li><a href="">aquele negocio</a></li>
+      </ul>
+    </aside>
+
+    <figure>
+      <img src="logo-html.jpg">
+      <figcaption>Esse é a logo do HTML</figcaption>
+    </figure>
+
+
+  </main>
+
+  <footer>
+    <h2>Rodapé da pagina</h2>
+    Aqui é criado o rodapé da pagina com politicas, termos, links, redes sociais ... etc
+    <address>
+      <a href="">meu linkedin</a>
+    </address>
+  </footer>
+
+  <br><br>
+
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+/*-------------------------------------------*/
+/*-------------- Especificidade -------------*/
+/*-------------------------------------------*/
+
+
+#meu-paragrafo {
+    background-color: blueviolet;
+}
+
+.conteiner-cascata p {
+    background-color: aqua
+        !important
+    ;
+}
+
+
+p {
+    background-color: red;
+}*/
+
+/* 0.0.1*/
+
+/*No efeito cascata a especificidade se destaca sempre
+(!important) é o usado no maior escalão de especificidade usado
+em ultimos casos*/
+
+/* ----------------------------------------------------*/
+/* -------------------- TEXT ALIGN --------------------*/
+/* ----------------------------------------------------*/
+
+
+.fundo-alinhado {
+    background-color: rgb(199, 199, 199);
+    padding: 20px;
+}
+
+.alinhamento-esquerda {
+    text-align: left;
+}
+
+.alinhamento-direita {
+    text-align: right;
+}
+
+.alinhamento-centro {
+    text-align: center;
+}
+
+.alinhamento-justificado {
+    text-align: justify;
+}
+
+.maiusculo {
+    text-transform: uppercase;
+}
+
+.minusculo {
+    text-transform: lowercase;
+}
+
+.capitalizado {
+    text-transform: capitalize;
+}
+
+.sublinhado {
+    text-decoration: underline;
+}
+
+.linha-sobreposta {
+    text-decoration: line-through;
+}
+
+.sem-text-decoration {
+    text-decoration: none;
+}
+
+.sombra {
+    text-shadow: 10px 10px 1px #808080;
+}
+*/
+
+
+/*-------------------------------------------------------*/
+/*-----------------Propriedades Fontes-------------------*/
+/*-------------------------------------------------------*/
+
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family:'Courier New', Courier, monospace;    
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*-------------------------------------------------------*/
+/*-------------------------Links-------------------------*/
+/*-------------------------------------------------------*/
+
+
+
+a {
+    cursor: progress;
+    margin: 20px;
+    padding: 10px;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:active {
+    color: red;
+}
+
+a:hover {
+    background-color: red;
+    color: white;
+}
+
+
+
+/*-------------------------------------------------------*/
+/*-------------------------Listas------------------------*/
+/*-------------------------------------------------------*/
+
+
+ul {
+    list-style: square inside url('./images/iconeee.png');
+}
+*/
+
+/*-------------------------------------------------------*/
+/*-------------------------BackGroud---------------------*/
+/*-------------------------------------------------------*/
+
+p {
+    color: coral;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bg {
+    background-color: lightgreen;
+    background-image: url('./images/sukuna.jpg');
+}
+
+.bg-image {
+    width: 1308px;
+    height: 736px;
+}
+
+/* backgroud-repeat no-repeat= serve para não repetir "noprepeat" mas tbm pode ser usada com y ou x
+backgroud-attachment fixed = fixa no fundo do site a imagem sem que ela scrolla
+backgroud-position = ele ajuda a fixar a imagem em algum lugar que deseja, abaixo, acima, esquerda, direita ou até msm por pixel  
+*/
+
+/*-------------------------------------------------------*/
+/*-------------------------Display-----------------------*/
+/*-------------------------------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 24px;
+}
+
+ul {
+    margin-bottom: 50px;
+}
+
+.em-bloco li{
+    background: aqua;
+    margin-bottom: 10px;
+    width: 100px;
+}
+
+.em-linha li {
+    display: inline;
+    background: aqua;
+}
+
+.em-linha-e-bloco li {
+    display: inline-block;
+    background: aqua;
+    width: 100px;
+    height: 100px;
+}
+
+.esconder {
+    display: none;
+}
+
+
+/*-------------------------------------------------------*/
+/*-----------------------Position------------------------*/
+/*-------------------------------------------------------*/
+
+ * {
+    margin: 0;
+}
+
+.elemento {
+    color: #fff;
+    font-size: 32px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.elemento-estatico {
+    position: static;
+    background-color: crimson;
+}
+
+.elemento-relativo {
+    position: relative;
+    background-color: coral;
+    left: 100px;
+}
+
+.elemento-absoluto {
+    position: absolute;
+    left: 200px;
+    background-color: darkcyan;
+    top: 0;
+}
+
+.elemento-filho {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: aliceblue;
+}
+
+.elemento-pai {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    background-color: darkcyan;
+} */
+
+/*-------------------------------------------------------*/
+/*-------------------Position Fixed----------------------*/
+/*-------------------------------------------------------*/
+
+* {
+    margin: 0;
+}
+
+body {
+    height: 1500px;
+    padding-top: 67px;
+}
+
+header {
+    font-size: 24px;
+    position: fixed;
+    background-color: lightblue;
+    width: 100%;
+    padding: 20px;
+    top: 0;
+} 
+
+/* fixa o elemento na tela MENU  */
