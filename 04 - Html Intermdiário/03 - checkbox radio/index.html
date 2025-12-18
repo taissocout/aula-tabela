@@ -4,29 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Checkbox, Radio</title>
 </head>
 
 <body>
+
     <h1>Check Box, Radio</h1>
+    <label for="csharp">C#</label>
 
-
-    <h3>linguagens de Programação</h3>
-    <label for="c#">C#</label>
-    <input type="checkbox" id="c#" name="linguagens" checked>
+    <!--
+      type="checkbox" → cria um checkbox
+      id → identificador único do input
+      name → nome enviado no formulário
+      checked → faz o checkbox já iniciar marcado
+    -->
+    <input type="checkbox" id="csharp" name="linguagens" checked>
     <br>
+
     <label for="javascript">JavaScript</label>
-    <input type="checkbox" id="javascript" name="linguagens">
-    <br>
-    <br>
 
+    <!--
+      Checkbox sem "checked" inicia desmarcado
+    -->
+    <input type="checkbox" id="javascript" name="linguagens">
+    <br><br>
+
+    <!-- =============================== -->
+    <!-- RADIO BUTTON -->
+    <!-- =============================== -->
+
+    <!--
+      RADIO:
+      Permite escolher APENAS UMA opção
+      Todos os radios devem ter o MESMO "name"
+    -->
     <h3>Sim ou Não</h3>
+
     <label for="sim">Sim</label>
+
+    <!--
+      type="radio" → botão de escolha única
+      name="genero" → agrupa os radios
+      checked → opção selecionada por padrão
+    -->
     <input type="radio" name="genero" id="sim" checked>
     <br>
-    <label for="não">Não</label>
-    <input type="radio" name="genero" id="não">
 
+    <label for="nao">Não</label>
+
+    <!--
+      Como o name é o mesmo, apenas um radio pode ser marcado
+    -->
+    <input type="radio" name="genero" id="nao">
+
+    <!--
+      RESUMO:
+      ✔ Checkbox → múltipla escolha
+      ✔ Radio → escolha única
+      ✔ label + for → acessibilidade e usabilidade
+    -->
 
 </body>
 

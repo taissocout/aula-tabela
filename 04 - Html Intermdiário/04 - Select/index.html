@@ -4,31 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Select</title>
 </head>
 
 <body>
+
     <h1>Select</h1>
 
     <h3>Escolha apenas um Carro</h3>
-    <label for="carros">Carros</label>
-    <select id="filmes" name="carros" id="carros">
-        <option value=" " selected>Selecione um Carro</option>
+
+    <!--
+      label associado corretamente ao select
+      O atributo "for" deve ser IGUAL ao id do select
+    -->
+    <label for="carro-unico">Carros</label>
+
+    <!--
+      CORREÇÃO:
+      ❌ O código tinha dois atributos id no mesmo elemento (erro HTML)
+      ✔ Agora existe apenas UM id válido
+
+      Select SEM o atributo "multiple"
+      → permite selecionar apenas UMA opção
+    -->
+    <select name="carros" id="carro-unico">
+        <!--
+          Opção padrão apenas para orientação do usuário
+          value="" evita envio de valor inválido
+        -->
+        <option value="" selected>Selecione um Carro</option>
         <option value="volvo">Volvo</option>
         <option value="bmw">BMW</option>
         <option value="ford">Ford</option>
         <option value="audi">Audi</option>
     </select>
 
-        <h3>Escolha Multiples Carro</h3>
-    <label for="carros">Carros</label>
-    <select id="filmes" name="carros" id="carros" multiple>
-        <option value=" ">Selecione um Carro</option>
+    <h3>Escolha Múltiplos Carros</h3>
+
+    <label for="carro-multiplo">Carros</label>
+
+    <!--
+      CORREÇÃO:
+      ✔ id único diferente do select anterior
+      ✔ Uso do atributo "multiple"
+
+      Select COM "multiple"
+      → permite selecionar MAIS DE UMA opção
+      (Ctrl ou Shift no teclado)
+    -->
+    <select name="carros" id="carro-multiplo" multiple>
         <option value="volvo">Volvo</option>
         <option value="bmw">BMW</option>
         <option value="ford">Ford</option>
         <option value="audi">Audi</option>
     </select>
+
+    <!--
+      RESUMO:
+      ✔ select sem "multiple" → escolha única
+      ✔ select com "multiple" → múltipla escolha
+      ✔ id único é obrigatório (HTML válido)
+      ✔ label + for melhora acessibilidade
+    -->
+
 </body>
 
 </html>

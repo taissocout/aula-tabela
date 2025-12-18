@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea</title>
+</head>
+
+<body>
+
+    <h1>TextArea</h1>
+
+    <!--
+      textarea é usado para textos longos
+      Exemplo: comentários, descrições, mensagens, biografia, etc.
+    -->
+
+    <!--
+      name="texto"
+      → nome do campo que será enviado para o backend
+
+      id="texto"
+      → identificador único (usado por label, JS ou CSS)
+
+      cols="30"
+      → largura visível do campo (em colunas de texto)
+
+      rows="10"
+      → altura visível do campo (em linhas de texto)
+    -->
+    <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+
+    <!--
+      BOA PRÁTICA:
+      - Não deixar espaços dentro da textarea se não houver texto padrão
+      - Se quiser texto inicial, escreva ENTRE a abertura e o fechamento
+      Ex:
+      <textarea>Texto padrão aqui</textarea>
+    -->
+
+</body>
+
+</html>
