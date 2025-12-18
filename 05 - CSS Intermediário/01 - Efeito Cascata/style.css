@@ -1,0 +1,11 @@
+.conteiner-cascata {
+    background-color: blueviolet;
+}
+
+.conteiner-especificidade p {
+    background-color: coral;
+}
+
+.conteiner-cascata p {
+    color: mediumaquamarine;
+}
