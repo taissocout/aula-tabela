@@ -1,0 +1,121 @@
+/* 
+  FUNDO PARA EXEMPLOS DE ALINHAMENTO DE TEXTO
+  → usado apenas para visualização
+*/
+.fundo-alinhamento {
+    background-color: #6a00ff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* 
+  TEXT-ALIGN
+  → controla o alinhamento horizontal do texto
+*/
+
+/* Alinha o texto à esquerda (padrão do navegador) */
+.alinhamento-esquerda {
+    text-align: left;
+}
+
+/* Alinha o texto à direita */
+.alinhamento-direita {
+    text-align: right;
+}
+
+/* Centraliza o texto */
+.alinhamento-centro {
+    text-align: center;
+}
+
+/* Justifica o texto (estilo livro/jornal) */
+.alinhamento-justificado {
+    text-align: justify;
+}
+
+/* 
+  FUNDO PARA EXEMPLOS DE TRANSFORMAÇÃO DE TEXTO
+*/
+.fundo-transform {
+    background-color: #db0404;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* 
+  TEXT-TRANSFORM
+  → altera a forma visual das letras
+  (não muda o conteúdo real do texto)
+*/
+
+/* Converte todo o texto para MAIÚSCULO */
+.maiusculas {
+    text-transform: uppercase;
+}
+
+/* Converte todo o texto para minúsculo */
+.minusculas {
+    text-transform: lowercase;
+}
+
+/* Primeira letra de cada palavra em maiúsculo */
+.capitalize {
+    text-transform: capitalize;
+}
+
+/* 
+  TEXT-SHADOW
+  → adiciona sombra ao texto
+  sintaxe: eixo-x eixo-y desfoque cor
+*/
+.text-shadow {
+    text-shadow: 2px 2px 5px #000000;
+}
+
+/* 
+  FUNDO PARA EXEMPLOS DE DECORAÇÃO DE TEXTO
+*/
+.fundo-decoration {
+    background-color: #f2ff00;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 
+  TEXT-DECORATION
+  → adiciona ou remove decoração no texto
+*/
+
+/* Texto sublinhado */
+.underline {
+    text-decoration: underline;
+}
+
+/* Texto riscado (muito usado para preços antigos) */
+.line-through {
+    text-decoration: line-through;
+}
+
+/* Remove qualquer decoração (comum em links) */
+.text-decoration-none {
+    text-decoration: none;
+}
+
+/* 
+  FUNDO GENÉRICO
+  → apenas para visualização
+*/
+.fundo {
+    background-color: #0ec707;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+/* 
+  CONFIGURAÇÃO GLOBAL DO HTML
+  → define o tamanho base da fonte
+  → 16px é o padrão dos navegadores
+*/
+html {
+    font-size: 24px;
+}

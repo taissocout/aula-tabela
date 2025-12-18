@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos e Alinhamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--
+      EXEMPLO: ALINHAMENTO À ESQUERDA
+      → text-align: left
+      → comportamento padrão do navegador
+    -->
+    <h2>Alinhamento ESQUERDA</h2>
+    <p class="alinhamento-esquerda fundo-alinhamento">TEXTO A ESQUERDA</p>
+
+    <!--
+      EXEMPLO: ALINHAMENTO À DIREITA
+      → text-align: right
+      → pode ser aplicado no container
+    -->
+    <h2>Alinhamento DIREITA</h2>
+    <div class="alinhamento-direita fundo-alinhamento">
+        <p>TEXTO A DIREITA</p>
+    </div>
+
+    <!--
+      EXEMPLO: TEXTO CENTRALIZADO
+      → text-align: center
+    -->
+    <h2>Alinhamento CENTRO</h2>
+    <p class="alinhamento-centro fundo-alinhamento">TEXTO AO CENTRO</p>
+
+    <!--
+      TEXTO JUSTIFICADO
+      → text-align: justify
+      → muito usado em textos longos (livros/artigos)
+    -->
+    <h4>Texto justificado</h4>
+    <p class="alinhamento-justificado fundo-alinhamento">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Aperiam laudantium dolorum nemo placeat et quaerat soluta rem autem voluptates.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem accusantium cumque 
+        soluta rem vel voluptate ea deserunt, magnam illo labore eos facilis natus nesciunt 
+        sed consequatur ullam quasi sapiente distinctio. Lorem ipsum dolor sit, amet 
+        consectetur adipisicing elit. Nam ipsa quos at reprehenderit fuga placeat incidunt 
+        laboriosam ipsam veniam consequatur, minus earum iste, quas autem consequuntur
+         aut sunt veritatis nesciunt!Lorem
+    </p>
+
+    <!--
+      TEXTO SEM JUSTIFICAR
+      → usa o alinhamento padrão
+    -->
+    <h4>texto sem justificado</h4>
+    <p class="fundo-alinhamento">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Veritatis alias ipsa eos mollitia nobis officiis.
+    </p>
+
+    <!--
+      TEXT-TRANSFORM: UPPERCASE
+      → transforma todo o texto em maiúsculas
+    -->
+    <h4>Text maiusculas</h4>
+    <p class="maiusculas fundo-transform">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <!--
+      TEXT-DECORATION: UNDERLINE
+      → adiciona sublinhado
+    -->
+    <h4>Text sublinhado</h4>
+    <p class="underline fundo-decoration">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <!--
+      TEXT-DECORATION: LINE-THROUGH
+      → texto riscado (preço antigo, item removido)
+    -->
+    <h4>Text linha sobreposta</h4>
+    <p class="line-through fundo-decoration">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <!--
+      REMOÇÃO DE DECORAÇÃO
+      → comum para remover underline de links
+    -->
+    <h4>Text Decoration</h4>
+    <p class="text-decoration-none fundo-decoration">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <!--
+      TEXT-SHADOW
+      → sombra aplicada ao texto
+      → melhora destaque visual
+    -->
+    <h4>Text Shadow</h4>
+    <p class="text-shadow fundo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <!--
+      RESUMO DIDÁTICO:
+      ✔ text-align → alinhamento do texto
+      ✔ text-transform → transformação visual
+      ✔ text-decoration → sublinhado / risco
+      ✔ text-shadow → sombra
+      ✔ classes reutilizáveis → boa prática
+    -->
+
+</body>
+
+</html>
