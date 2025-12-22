@@ -1,0 +1,20 @@
+a {
+    cursor: progress;
+    margin: 20px;
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: violet;
+    text-decoration: underline;
+    background-color: tomato;
+}
+
+a:active {
+    color: orange;
+}

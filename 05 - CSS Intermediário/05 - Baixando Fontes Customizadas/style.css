@@ -1,14 +1,7 @@
 @font-face {
     font-family: 'Milky';
-    src: url('./fonts/Milky-Regular.woff2') format('woff2'),
-         url('./fonts/Milky-Regular.woff') format('woff'),
-         url('./fonts/Milky-Regular.otf') format('opentype');
-}
-body {
-    background-color: #f9f9f9;
-    font-family: 'Milky', sans-serif !important;
-    margin: 0;
-    padding: 20px;
+    src: url('./fonts/Milky-Regular.otf'),
+        url('./fonts/Milky-Regular.ttf') ;
 }
 
 h1 {
