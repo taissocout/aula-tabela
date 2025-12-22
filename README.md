@@ -46,18 +46,10 @@ Sempre utilizando a IA como **apoio ao aprendizado**, entendendo todo o código 
 
 ```text
 📁 DevQuest-Aulas
- ┣ 📁 Css
- ┃ ┣ 📁 images
- ┃ ┃ ┣ 🖼️ icone.png
- ┃ ┃ ┗ 🖼️ sukuna.jpg
- ┃ ┣ 📄 index.html
- ┃ ┗ 📄 style.css
- ┣ 📁 Html
- ┃ ┗ 📁 html
- ┃   ┣ 📄 index.html
- ┃   ┗ 📄 README.md
- ┣ 📁 Tabelas
- ┃ ┗ 📁 tabela
- ┃   ┗ 📄 index.html
+ ┣ 📁 01-html-basico
+ ┣ 📁 02-css-basico
+ ┣ 📁 03-exercicio-tabela
+ ┣ 📁 04-html-intermediario
+ ┣ 📁 05-css-intermediario
  ┣ 📄 .gitignore
  ┗ 📄 README.md
