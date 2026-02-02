@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR"> <!-- CORREÇÃO: idioma em português -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ERRO: reset.css vinha depois do style.css -->
+    <!-- CORREÇÃO: reset sempre antes -->
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+
+    <title>Responsividade e Media Queries</title>
 </head>
+
 <body>
-    
-        
+
+    <header class="cabecalho">
+        <!-- ERRO: h1 com classe errada -->
+        <!-- CORREÇÃO: criar classe específica -->
+        <h1 class="logo">Logo</h1>
+
+        <nav>
+            <ul>
+                <li><a href="#quem-somos">Quem Somos</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="painel">
+            <div class="info">
+                <h1>Um Filme do Batman</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+            </div>
+
+            <!-- ERRO: source fora de picture -->
+            <!-- CORREÇÃO: usar picture -->
+            <div class="imagem">
+                <picture>
+                    <source srcset="./images/bat3-pequena.jpg" media="(max-width: 600px)">
+                    <img src="./images/bat3.jpg" alt="Imagem de um filme do Batman">
+                </picture>
+            </div>
+
+        </section>
+    </main>
 
 </body>
 </html>
