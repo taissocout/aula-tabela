@@ -4,49 +4,55 @@ body {
     color: white;
 }
 
-.texto-centralizado-2 {
-    position: absolute;
-    /* ✅ agora existe */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: darkorchid;
-    padding: 10px;
+/* CONTAINER PADRÃO */
+.container {
+    background-color: lightgray;
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
 }
 
-.alinhado-margin-auto {
-    display: block;
-    margin: auto;
-}
-
-.alinhado-absolute {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
+/* BOTÃO PADRÃO */
 .btn {
     width: 250px;
     height: 50px;
     background-color: darkcyan;
     color: white;
     font-size: 1.2em;
+    border: none;
+    cursor: pointer;
 }
 
+/* TEXTO CENTRALIZADO COM LINE-HEIGHT */
 .texto-centralizado-1 {
     width: 250px;
     height: 250px;
     background-color: darkorange;
     text-align: center;
     line-height: 250px;
+    margin-bottom: 20px;
 }
 
+/* TEXTO CENTRALIZADO COM POSITION ABSOLUTE */
 .texto-centralizado-2 {
-    position: center;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: darkorchid;
+    padding: 10px 20px;
+}
+
+/* BOTÃO CENTRALIZADO COM MARGIN AUTO */
+.alinhado-margin-auto {
+    display: block;
+    margin: auto;
+}
+
+/* BOTÃO CENTRALIZADO COM POSITION ABSOLUTE */
+.alinhado-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
