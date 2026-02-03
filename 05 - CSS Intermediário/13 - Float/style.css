@@ -1,0 +1,26 @@
+.float .right {
+    float: right;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.float .left {
+    float: left;
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}
+
+.float:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-right: 15px;
+}
