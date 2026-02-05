@@ -1,0 +1,176 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: Seletores CSS (guia prático)
+   ========================================================= */
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Layout */
+.card {
+  background: #171a21;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.topo h1 { margin-bottom: 8px; }
+.subtitulo { opacity: 0.85; margin-bottom: 12px; }
+.explicacao { opacity: 0.95; margin-bottom: 12px; }
+
+code {
+  background: #0b0d12;
+  border: 1px solid #2a2f3a;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.demo { margin-bottom: 8px; }
+.demo-box {
+  padding: 12px;
+  background: #10131a;
+  border: 1px dashed #2a2f3a;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   1) TAG selector (seleciona todos os <p>)
+   ========================================================= */
+p {
+  /* De propósito, bem leve, pra não “vazar” muito */
+  opacity: 0.98;
+}
+
+/* =========================================================
+   2) CLASS selector
+   ========================================================= */
+.destaque {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #2a2f3a;
+  background: #0b0d12;
+  color: #e8e8e8;
+  cursor: pointer;
+}
+
+/* elemento com duas classes ao mesmo tempo */
+.btn.btn-secundario {
+  background: #10131a;
+  border-style: dashed;
+}
+
+/* outra variação */
+.btn.btn-perigo {
+  border-color: #fb7185;
+}
+
+/* =========================================================
+   3) ID selector
+   ========================================================= */
+#caixa-unica {
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* =========================================================
+   4) Agrupamento
+   ========================================================= */
+h3, h4, .mini {
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   5) Descendente vs Filho direto
+   ========================================================= */
+
+/* Descendente: qualquer p dentro de .pai */
+.pai p {
+  border-left: 4px solid #66a6ff;
+  padding-left: 10px;
+}
+
+/* Filho direto: p que é filho direto de .pai */
+.pai > p {
+  border-left-color: #4ade80;
+}
+
+/* =========================================================
+   6) Irmãos: + e ~
+   ========================================================= */
+
+/* Apenas o PRIMEIRO p logo depois do h3 */
+.irmaos h3 + p {
+  color: #facc15;
+  font-weight: bold;
+}
+
+/* Todos os p irmãos que vêm depois do h3 */
+.irmaos h3 ~ p {
+  opacity: 0.95;
+}
+
+/* =========================================================
+   7) Atributos
+   ========================================================= */
+
+/* Input específico por tipo */
+input[type="email"] {
+  border: 2px solid #66a6ff;
+}
+
+/* Outro tipo */
+input[type="password"] {
+  border: 2px solid #fb7185;
+}
+
+/* Link com target _blank */
+a[target="_blank"] {
+  display: inline-block;
+  margin-top: 10px;
+  color: #c084fc;
+  text-decoration: none;
+}
+
+/* =========================================================
+   Form
+   ========================================================= */
+.form {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #2a2f3a;
+  background: #0b0d12;
+  color: #e8e8e8;
+}
+
+.rodape { opacity: 0.85; margin-top: 12px; }

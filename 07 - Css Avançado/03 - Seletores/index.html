@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Estudo de Seletores CSS (os mais usados no dia a dia).
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Seletores CSS - Guia Prático</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Seletores CSS (Guia Prático)</h1>
+      <p class="subtitulo">
+        Nesta página você vai entender os seletores mais usados: tag, classe, id, agrupamento,
+        descendente, filho direto, irmão, atributo e combinações.
+      </p>
+    </header>
+
+    <!-- 1) Seletor de TAG -->
+    <section class="card" id="tag">
+      <h2>1) Seletor por TAG (ex: p, h2, button)</h2>
+      <p class="explicacao">
+        ✅ Seleciona todos os elementos daquela tag.
+        <br />
+        Exemplo: <code>p { ... }</code> aplica em todos os parágrafos.
+      </p>
+      <p class="demo">Eu sou um parágrafo (tag selector).</p>
+      <p class="demo">Eu também sou um parágrafo (tag selector).</p>
+    </section>
+
+    <!-- 2) Seletor de CLASSE -->
+    <section class="card" id="classe">
+      <h2>2) Seletor por CLASSE (ex: .btn, .card)</h2>
+      <p class="explicacao">
+        ✅ Classe é o mais usado no mercado. Você reaproveita estilos.
+        <br />
+        Exemplo: <code>.destaque { ... }</code>.
+      </p>
+      <p class="demo">
+        Texto normal e um <span class="destaque">trecho com classe .destaque</span>.
+      </p>
+      <button class="btn">Botão com classe .btn</button>
+      <button class="btn btn-secundario">Botão com duas classes</button>
+    </section>
+
+    <!-- 3) Seletor de ID -->
+    <section class="card" id="id">
+      <h2>3) Seletor por ID (ex: #menu)</h2>
+      <p class="explicacao">
+        ✅ ID é único (não repete na página). Em CSS, use com cuidado.
+        <br />
+        Exemplo: <code>#caixa-unica { ... }</code>.
+      </p>
+      <div id="caixa-unica" class="demo-box">
+        Eu sou uma caixa com <code>id="caixa-unica"</code>.
+      </div>
+    </section>
+
+    <!-- 4) Agrupamento -->
+    <section class="card" id="grupo">
+      <h2>4) Agrupamento (ex: h3, h4, p)</h2>
+      <p class="explicacao">
+        ✅ Você aplica o mesmo estilo em vários seletores de uma vez.
+        <br />
+        Exemplo: <code>h3, h4, .mini { ... }</code>.
+      </p>
+      <h3 class="mini">Título h3</h3>
+      <h4 class="mini">Título h4</h4>
+      <p class="mini">Parágrafo com classe mini</p>
+    </section>
+
+    <!-- 5) Descendente e Filho direto -->
+    <section class="card" id="descendente">
+      <h2>5) Descendente (espaço) e Filho Direto (&gt;)</h2>
+      <p class="explicacao">
+        ✅ <code>.pai p</code> pega qualquer <code>p</code> dentro de .pai (mesmo que esteja “lá dentro”).
+        <br />
+        ✅ <code>.pai &gt; p</code> pega somente <code>p</code> que seja filho direto.
+      </p>
+
+      <div class="pai">
+        <p class="demo">Sou filho direto de .pai (pego por .pai &gt; p).</p>
+
+        <div class="filho">
+          <p class="demo">
+            Eu estou dentro de .filho, mas ainda estou dentro de .pai (pego por .pai p).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6) Irmãos: + e ~ -->
+    <section class="card" id="irmaos">
+      <h2>6) Irmãos: Adjacent (+) e Geral (~)</h2>
+      <p class="explicacao">
+        ✅ <code>h3 + p</code> pega o primeiro <code>p</code> logo após o <code>h3</code>.
+        <br />
+        ✅ <code>h3 ~ p</code> pega todos os <code>p</code> irmãos que vêm depois do <code>h3</code>.
+      </p>
+
+      <div class="irmaos">
+        <h3>Meu h3</h3>
+        <p class="demo">Eu sou o PRIMEIRO p depois do h3 (h3 + p).</p>
+        <p class="demo">Eu também sou p depois do h3 (h3 ~ p).</p>
+        <p class="demo">Eu também sou p depois do h3 (h3 ~ p).</p>
+      </div>
+    </section>
+
+    <!-- 7) Seletor de Atributo -->
+    <section class="card" id="atributos">
+      <h2>7) Seletores de Atributo (ex: [type="email"])</h2>
+      <p class="explicacao">
+        ✅ Muito usado em formulários e links.
+        <br />
+        Exemplo: <code>input[type="email"] { ... }</code>
+      </p>
+
+      <form class="form">
+        <label>
+          Email:
+          <input type="email" placeholder="voce@email.com" />
+        </label>
+
+        <label>
+          Senha:
+          <input type="password" placeholder="••••••••" />
+        </label>
+
+        <a class="link" href="https://exemplo.com" target="_blank" rel="noreferrer">
+          Link externo (tem target="_blank")
+        </a>
+      </form>
+    </section>
+
+    <!-- 8) Combinações comuns -->
+    <section class="card" id="combinacoes">
+      <h2>8) Combinações comuns</h2>
+      <p class="explicacao">
+        ✅ Seletor bem comum: <code>.card .btn</code> (botões dentro de card).
+        <br />
+        ✅ Outro comum: <code>.btn.btn-secundario</code> (elemento com as duas classes).
+      </p>
+
+      <button class="btn">Botão normal</button>
+      <button class="btn btn-secundario">Botão secundário</button>
+      <button class="btn btn-perigo">Botão perigo</button>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        Dica de dev: use mais <code>classes</code> do que <code>id</code>.
+        E prefira seletores “com escopo” (ex: <code>.card p</code>) para não bagunçar o site todo.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
