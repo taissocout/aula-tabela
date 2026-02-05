@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagens responsivas com a tag picture</title>
+    <title>Imagens Responsivas com <picture></title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
+    </style>
 </head>
-
 <body>
-    <h1>Picture com mobile fisrt</h1>
-    <picture>
-        <source media="(min-width: 4768px)" srcset="https://wallpapers.com/images/high/kitten-cat-pictures-kxdkfnfzl1gbsx2o.webp ">
-        <source media="(min-width: 465px)" srcset="https://wallpapers.com/images/high/kitten-cat-pictures-kxdkfnfzl1gbsx2o.webp">
-        <img src="https://wallpapers.com/images/high/kitten-cat-pictures-kxdkfnfzl1gbsx2o.webp" alt="Imagem de um gatinho">
-    </picture>
-</body>
+    <h1>Imagens Responsivas com &lt;picture&gt;</h1>
 
+    <picture>
+        <!-- Desktop grande -->
+        <source media="(min-width: 1024px)"
+                srcset="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg">
+        <!-- Tablet -->
+        <source media="(min-width: 600px)"
+                srcset="https://images.pexels.com/photos/4587994/pexels-photo-4587994.jpeg">
+        <!-- Mobile -->
+        <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg"
+             alt="Um cachorro feliz">
+    </picture>
+
+</body>
 </html>
