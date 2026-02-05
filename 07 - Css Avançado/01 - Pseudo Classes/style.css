@@ -1,0 +1,32 @@
+/* seletor:pseudo-classe {
+    propriedade: valor;
+} */
+
+
+/* Estilização do elemento filho p que é o primeiro filho do seu elemento pai */
+p:first-child {
+    color: blue;
+    font-weight: bold;
+}
+
+/* estilização do elemento filho p que é o último filho do seu elemento pai */
+p:last-child {
+    color: green;
+    font-style: italic;
+}
+
+/* estilização do elemento filho p que não possui a classe "padrao" */
+p:not(.padrao) {
+    color: yellow;
+}
+
+/* estilização dos elementos li que são filhos pares e ímpares de seu elemento pai */
+
+li:nth-child(even) {
+    color: purple;
+}
+
+/* estilização dos elementos li que são filhos ímpares de seu elemento pai */
+li:nth-child(odd) {
+    color: red;
+}
