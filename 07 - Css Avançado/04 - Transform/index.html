@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: CSS Transform (guia completo, visual e didático).
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CSS Transform - Guia Completo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>CSS Transform (Guia Completo)</h1>
+
+      <p class="subtitulo">
+        <strong>Transform</strong> muda a forma/posição visual de um elemento (sem “empurrar” o layout ao redor).
+        Você vai ver: <code>translate</code>, <code>scale</code>, <code>rotate</code>, <code>skew</code>,
+        <code>transform-origin</code>, transform 3D e combinações.
+      </p>
+
+      <p class="explicacao">
+        ✅ Dica de dev: <code>transform</code> é perfeito para animações e efeitos, porque costuma performar melhor que
+        mexer em <code>top/left</code>.
+        <br />
+        Passe o mouse nos cards abaixo para ver os efeitos.
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) translate
+         ======================================================= -->
+    <section class="card">
+      <h2>1) translate(x, y)</h2>
+      <p class="explicacao">
+        ✅ Move o elemento visualmente (não muda o espaço “reservado” no layout).
+        <br />
+        Exemplo: <code>transform: translate(20px, -10px);</code>
+      </p>
+
+      <div class="row">
+        <div class="box demo translate">
+          <span class="label">Hover: translate</span>
+        </div>
+        <div class="hint">
+          <p>
+            Ao passar o mouse, a caixa “anda” pra direita e sobe um pouco.
+            Isso é muito usado em botões e cards com “efeito de levitar”.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         2) scale
+         ======================================================= -->
+    <section class="card">
+      <h2>2) scale()</h2>
+      <p class="explicacao">
+        ✅ Aumenta ou diminui o tamanho. Muito usado em hover de botões/cards.
+        <br />
+        Exemplo: <code>transform: scale(1.05);</code>
+      </p>
+
+      <div class="row">
+        <div class="box demo scale">
+          <span class="label">Hover: scale</span>
+        </div>
+        <div class="hint">
+          <p>
+            Ao passar o mouse, a caixa cresce levemente. Use com moderação para não “enjoar” o usuário.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         3) rotate
+         ======================================================= -->
+    <section class="card">
+      <h2>3) rotate()</h2>
+      <p class="explicacao">
+        ✅ Gira o elemento. Pode ser em graus: <code>rotate(10deg)</code>.
+      </p>
+
+      <div class="row">
+        <div class="box demo rotate">
+          <span class="label">Hover: rotate</span>
+        </div>
+        <div class="hint">
+          <p>
+            Rotação leve é usada em badges/ícones. Rotação forte geralmente fica “brincalhona” demais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         4) skew
+         ======================================================= -->
+    <section class="card">
+      <h2>4) skew()</h2>
+      <p class="explicacao">
+        ✅ “Entorta” o elemento (inclina). Bom para efeitos de destaque e design mais agressivo.
+      </p>
+
+      <div class="row">
+        <div class="box demo skew">
+          <span class="label">Hover: skew</span>
+        </div>
+        <div class="hint">
+          <p>
+            Skew é mais estilo “poster”. Se usar, use pouco e com consistência.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         5) transform-origin
+         ======================================================= -->
+    <section class="card">
+      <h2>5) transform-origin</h2>
+      <p class="explicacao">
+        ✅ Define o “pivô” do transform. Por padrão é o centro.
+        <br />
+        Exemplo: <code>transform-origin: left bottom;</code>
+      </p>
+
+      <div class="row">
+        <div class="box demo origin-center">
+          <span class="label">Origin: center</span>
+        </div>
+
+        <div class="box demo origin-corner">
+          <span class="label">Origin: left bottom</span>
+        </div>
+
+        <div class="hint">
+          <p>
+            Compare as duas: ambas rotacionam, mas uma gira do centro e a outra gira “pela quina”.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         6) Combinação (muito usado)
+         ======================================================= -->
+    <section class="card">
+      <h2>6) Combinações (translate + scale + rotate)</h2>
+      <p class="explicacao">
+        ✅ Dev usa muito combinações para dar efeito premium em cards.
+        <br />
+        Exemplo: <code>transform: translateY(-6px) scale(1.03) rotate(-1deg);</code>
+      </p>
+
+      <div class="row">
+        <div class="box demo combo">
+          <span class="label">Hover: combo</span>
+        </div>
+        <div class="hint">
+          <p>
+            Esse é o efeito clássico de “card levantando”, com um toque de rotação bem leve.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         7) 3D: perspective + rotateX/rotateY
+         ======================================================= -->
+    <section class="card">
+      <h2>7) 3D: perspective + rotateX/rotateY</h2>
+      <p class="explicacao">
+        ✅ Para 3D, normalmente você aplica <code>perspective</code> no container/pai.
+        <br />
+        Exemplo: <code>perspective: 900px;</code>
+      </p>
+
+      <div class="row perspective">
+        <div class="box demo tilt-3d">
+          <span class="label">Hover: 3D tilt</span>
+        </div>
+        <div class="hint">
+          <p>
+            Esse “tilt” 3D é comum em cards e thumbnails. Cuidado: exagero dá tontura.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         8) 3D avançado: preserve-3d + faces
+         ======================================================= -->
+    <section class="card">
+      <h2>8) 3D avançado: flip card (preserve-3d)</h2>
+      <p class="explicacao">
+        ✅ Aqui você vê um “flip card”: frente e verso com <code>backface-visibility</code>.
+        <br />
+        Passe o mouse no card para virar.
+      </p>
+
+      <div class="flip-wrap">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="label">FRONT</span>
+              <p class="mini">
+                Hover para virar (rotateY).
+              </p>
+            </div>
+            <div class="flip-face flip-back">
+              <span class="label">BACK</span>
+              <p class="mini">
+                Isso usa <code>transform-style: preserve-3d</code> + <code>backface-visibility</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="hint">
+          Esse efeito aparece em cards de produto, portfólios e UI de jogos.
+        </p>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        Resumo: <code>transform</code> altera a aparência sem reflow pesado.
+        Combine com <code>transition</code> para ficar suave.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
