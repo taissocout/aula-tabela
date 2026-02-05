@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: CSS Variables (Custom Properties) — guia prático e profissional.
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CSS Variables (Custom Properties)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>CSS Variables (Variáveis no CSS)</h1>
+
+      <p class="subtitulo">
+        Variáveis no CSS permitem centralizar valores como cores, espaçamentos,
+        tamanhos e sombras — facilitando manutenção, temas e escalabilidade.
+      </p>
+
+      <p class="explicacao">
+        ✅ Sintaxe básica:
+        <br />
+        <code>--nome-da-variavel: valor;</code>
+        <br />
+        Uso:
+        <br />
+        <code>color: var(--nome-da-variavel);</code>
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) Declaração no :root
+         ======================================================= -->
+    <section class="card">
+      <h2>1) Variáveis globais (:root)</h2>
+
+      <p class="explicacao">
+        ✅ O <code>:root</code> é o “escopo global”.
+        <br />
+        👉 Tudo que você declara ali pode ser usado no site inteiro.
+        <br />
+        👉 Devs usam isso para cores principais, fontes e espaçamentos padrão.
+      </p>
+
+      <p class="exemplo">
+        Este texto usa a cor definida na variável
+        <span class="badge">--color-primary</span>.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         2) Usando variáveis em componentes
+         ======================================================= -->
+    <section class="card">
+      <h2>2) Variáveis em componentes (cards e botões)</h2>
+
+      <p class="explicacao">
+        ✅ Aqui usamos variáveis para:
+        <br />
+        • cores
+        <br />
+        • border-radius
+        <br />
+        • espaçamento
+      </p>
+
+      <div class="box">
+        <p>
+          Este card herda variáveis globais, mas mantém o layout consistente
+          em todo o projeto.
+        </p>
+
+        <button class="btn">Botão primário</button>
+        <button class="btn btn-secundario">Botão secundário</button>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         3) Variáveis locais (escopo)
+         ======================================================= -->
+    <section class="card tema-verde">
+      <h2>3) Variáveis locais (escopo por classe)</h2>
+
+      <p class="explicacao">
+        ✅ Variáveis podem ser redefinidas em qualquer seletor.
+        <br />
+        👉 Isso permite criar temas diferentes sem duplicar CSS.
+      </p>
+
+      <p class="exemplo">
+        Este bloco sobrescreveu <code>--color-primary</code>
+        apenas dentro da classe <code>.tema-verde</code>.
+      </p>
+
+      <button class="btn">Botão com tema verde</button>
+    </section>
+
+    <!-- =======================================================
+         4) Variáveis + fallback
+         ======================================================= -->
+    <section class="card">
+      <h2>4) Fallback (valor de segurança)</h2>
+
+      <p class="explicacao">
+        ✅ Você pode definir um valor reserva caso a variável não exista.
+        <br />
+        Exemplo:
+        <br />
+        <code>color: var(--nao-existe, red);</code>
+      </p>
+
+      <p class="exemplo fallback">
+        Se a variável não existir, este texto fica vermelho.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         5) Variáveis para espaçamento e escala
+         ======================================================= -->
+    <section class="card">
+      <h2>5) Variáveis para espaçamento e escala</h2>
+
+      <p class="explicacao">
+        ✅ Muito comum em design systems:
+        <br />
+        <code>--space-sm</code>, <code>--space-md</code>, <code>--space-lg</code>
+      </p>
+
+      <div class="grid">
+        <div class="space sm">SM</div>
+        <div class="space md">MD</div>
+        <div class="space lg">LG</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         6) Tema escuro/claro (base)
+         ======================================================= -->
+    <section class="card tema-claro">
+      <h2>6) Exemplo de tema (dark / light)</h2>
+
+      <p class="explicacao">
+        ✅ Em projetos reais, o tema muda apenas trocando variáveis.
+        <br />
+        👉 Nenhuma regra estrutural muda.
+      </p>
+
+      <p class="exemplo">
+        Este card simula um tema claro redefinindo variáveis localmente.
+      </p>
+
+      <button class="btn">Botão no tema claro</button>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        Dica de dev: se você mexe em várias cores no CSS sem variáveis,
+        você está criando dívida técnica.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>

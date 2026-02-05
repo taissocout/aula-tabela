@@ -1,0 +1,139 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: CSS Variables (Custom Properties)
+   ========================================================= */
+
+/* =========================================================
+   1) VARIÁVEIS GLOBAIS
+   ========================================================= */
+:root {
+  /* Cores principais */
+  --color-bg: #0f1115;
+  --color-surface: #171a21;
+  --color-primary: #66a6ff;
+  --color-secondary: #c084fc;
+  --color-text: #e8e8e8;
+
+  /* Espaçamentos */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* Bordas */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+
+  /* Fonte */
+  --font-base: Arial, Helvetica, sans-serif;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid #2a2f3a;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.topo h1 { margin-bottom: var(--space-sm); }
+.subtitulo { opacity: 0.85; margin-bottom: var(--space-sm); }
+.explicacao { margin-bottom: var(--space-sm); }
+
+code {
+  background: #0b0d12;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #2a2f3a;
+}
+
+/* =========================================================
+   COMPONENTES
+   ========================================================= */
+.box {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.btn {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid #2a2f3a;
+  background: var(--color-primary);
+  color: #0f1115;
+  cursor: pointer;
+}
+
+.btn-secundario {
+  background: var(--color-secondary);
+}
+
+.badge {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #0f1115;
+  font-size: 0.8em;
+}
+
+/* =========================================================
+   VARIÁVEIS LOCAIS (ESCOPO)
+   ========================================================= */
+.tema-verde {
+  --color-primary: #4ade80;
+}
+
+.tema-claro {
+  --color-bg: #f4f4f5;
+  --color-surface: #ffffff;
+  --color-text: #111827;
+  --color-primary: #2563eb;
+}
+
+/* =========================================================
+   FALLBACK
+   ========================================================= */
+.fallback {
+  color: var(--nao-existe, red);
+}
+
+/* =========================================================
+   ESPAÇAMENTO ESCALONADO
+   ========================================================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.space {
+  text-align: center;
+  border-radius: var(--radius-sm);
+  background: #10131a;
+}
+
+.space.sm { padding: var(--space-sm); }
+.space.md { padding: var(--space-md); }
+.space.lg { padding: var(--space-lg); }
+
+/* Rodapé */
+.rodape {
+  opacity: 0.85;
+  margin-top: var(--space-md);
+}
