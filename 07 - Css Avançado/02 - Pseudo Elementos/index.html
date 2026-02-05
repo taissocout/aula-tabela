@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Objetivo: ensinar pseudo-elementos e uso de span de forma didática e prática.
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Pseudo Elementos (Completo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Pseudo Elementos (Completo)</h1>
+
+      <p class="subtitulo">
+        Aqui você vai ver os pseudo-elementos mais usados por devs:
+        <code>::first-letter</code>, <code>::first-line</code>,
+        <code>::before</code>, <code>::after</code>, <code>::marker</code> e <code>::selection</code>.
+      </p>
+
+      <p class="explicacao">
+        ✅ <strong>Importante:</strong> pseudo-elementos estilizam <strong>partes</strong> do elemento (com <code>::</code>).
+        <br />
+        ✅ Já o <code>&lt;span&gt;</code> é uma tag “neutra” para estilizar um pedaço específico do texto,
+        como <span class="tag">destaques</span>, <span class="tag">badges</span> e <span class="tag">labels</span>.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>1) ::first-letter (primeira letra)</h2>
+
+      <p class="explicacao">
+        ✅ Estiliza só a primeira letra. E o <code>&lt;span&gt;</code> destaca um trecho:
+        <span class="destaque">isso aqui</span>.
+      </p>
+
+      <p class="exemplo first-letter">
+        Este parágrafo demonstra <code>::first-letter</code>. Veja o destaque com <span class="destaque">span</span>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2) ::first-line (primeira linha)</h2>
+      <p class="exemplo first-line">
+        Este texto é maior de propósito para você perceber a primeira linha estilizada.
+        Ao mudar a largura da janela, a “primeira linha” muda e o estilo acompanha.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>3) ::before e ::after</h2>
+      <p class="exemplo before-after">
+        Este parágrafo ganha um ícone antes e um ok depois, tudo via CSS.
+      </p>
+
+      <h3 class="titulo-linha">Título com linha decorativa</h3>
+    </section>
+
+    <section class="card">
+      <h2>4) ::marker</h2>
+      <ul class="lista">
+        <li><span class="label">Feature:</span> pseudo-elementos deixam o CSS mais poderoso.</li>
+        <li><span class="label">Prática:</span> você controla detalhes visuais sem mexer no HTML.</li>
+        <li><span class="label">Dev style:</span> menos bagunça, mais organização.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>5) ::selection</h2>
+      <p class="exemplo selecao">
+        Selecione com o mouse uma parte deste texto para ver o <code>::selection</code>.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6) Badge com span</h2>
+      <p class="exemplo">
+        Plano Premium <span class="badge">NOVO</span> com destaque profissional.
+      </p>
+    </section>
+
+    <footer class="rodape">
+      <p>✅ Separação correta: HTML no .html e CSS no .css.</p>
+    </footer>
+  </main>
+</body>
+</html>
