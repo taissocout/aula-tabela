@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tutorial Completo de Vídeo em HTML</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    p {
+      background: #f5f5f5;
+      padding: 10px;
+      border-left: 4px solid #555;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎬 Tutorial Prático — Vídeo em HTML</h1>
+
+<p>
+Este arquivo funciona como um <strong>tutorial vivo</strong>.  
+Cada seção explica um uso diferente da tag <code>&lt;video&gt;</code>.
+</p>
+
+<!-- ========================================================= -->
+<section>
+<h2>1️⃣ Vídeo básico com controles</h2>
+
+<p>
+Este é o uso mais simples da tag <code>&lt;video&gt;</code>.  
+O atributo <strong>controls</strong> exibe os botões padrão do player.
+</p>
+
+<video width="640" controls>
+  <source src="videos/meu-video.mp4" type="video/mp4">
+  Seu navegador não suporta vídeo.
+</video>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>2️⃣ Exibindo vários formatos</h2>
+
+<p>
+Usar vários <code>&lt;source&gt;</code> permite que o navegador escolha o formato compatível.
+Exemplo com MP4 e WebM:
+</p>
+
+<video width="640" controls>
+  <source src="videos/meu-video.mp4" type="video/mp4">
+  <source src="videos/meu-video.webm" type="video/webm">
+  Seu navegador não suporta vídeo.
+</video>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>3️⃣ Autoplay (demonstrativo)</h2>
+
+<p>
+O atributo <strong>autoplay</strong> faz o vídeo iniciar sozinho.
+⚠️ Navegadores modernos só permitem autoplay se estiver <strong>muted</strong>.
+Este exemplo está <strong>comentado</strong> para estudo.
+</p>
+
+<!--
+<video width="640" autoplay muted>
+  <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
+-->
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>4️⃣ Loop (demonstrativo)</h2>
+
+<p>
+O atributo <strong>loop</strong> faz o vídeo repetir infinitamente.
+Muito usado para vídeos de fundo.
+Este exemplo está comentado para demonstração.
+</p>
+
+<!--
+<video width="640" controls loop>
+  <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
+-->
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>5️⃣ Poster (imagem antes do play)</h2>
+
+<p>
+O atributo <strong>poster</strong> mostra uma imagem antes do vídeo iniciar.
+Substitua <em>poster.jpg</em> por sua imagem de pré-visualização.
+</p>
+
+<video width="640" controls poster="videos/poster.jpg">
+  <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>6️⃣ Vídeo silencioso (muted)</h2>
+
+<p>
+O atributo <strong>muted</strong> inicia o vídeo sem som.
+Muito usado em backgrounds.
+</p>
+
+<video width="640" controls muted>
+  <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>7️⃣ Carregamento controlado (preload)</h2>
+
+<p>
+O atributo <strong>preload</strong> controla quando o vídeo é carregado:
+<br>• <code>auto</code> → carrega tudo  
+<br>• <code>metadata</code> → carrega só informações  
+<br>• <code>none</code> → carrega só ao clicar
+</p>
+
+<video width="640" controls preload="metadata">
+  <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>8️⃣ Acessando via JavaScript</h2>
+
+<p>
+Controle do vídeo usando JavaScript para play e pause.
+</p>
+
+<video id="videoJS" width="640">
+  <source src="videos/meu-video.mp4" type="video/mp4">
+</video>
+
+<br><br>
+<button onclick="playVideo()">▶ Play</button>
+<button onclick="pauseVideo()">⏸ Pause</button>
+
+<script>
+  const video = document.getElementById("videoJS");
+
+  function playVideo() {
+    video.play();
+  }
+  function pauseVideo() {
+    video.pause();
+  }
+</script>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>9️⃣ Mensagens de suporte</h2>
+
+<p>
+Se o navegador não suportar a tag <code>&lt;video&gt;</code>,
+é exibida a mensagem abaixo dentro da tag.
+</p>
+
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>5️⃣ Thumbnail / Capa do vídeo (poster)</h2>
+
+<p>
+A <strong>thumbnail</strong> é a imagem que aparece antes do vídeo ser reproduzido.
+Ela é definida pelo atributo <code>poster</code>.
+<br><br>
+🔹 Use uma imagem JPG ou PNG  
+🔹 Geralmente no mesmo tamanho do vídeo (ex: 1280x720)
+</p>
+
+<video width="640" controls poster="videos/thumb.jpg">
+  <source src="videos/meu-video.mp4" type="video/mp4">
+  Seu navegador não suporta vídeo.
+</video>
+
+<p>
+➡️ Neste exemplo, a imagem <code>videos/thumb.jpg</code> será exibida
+até o usuário clicar em <strong>Play</strong>.
+</p>
+</section>
+
+
+</body>
+</html>
