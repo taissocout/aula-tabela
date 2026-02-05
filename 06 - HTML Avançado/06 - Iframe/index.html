@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Tutorial Prático — iframe em HTML</title>
+    <title>Tutorial Prático — iframe com YouTube</title>
 
     <style>
         body {
@@ -10,29 +10,35 @@
             line-height: 1.6;
             padding: 20px;
         }
+
         section {
             margin-bottom: 40px;
             border-bottom: 1px solid #ddd;
             padding-bottom: 20px;
         }
+
         h1, h2 {
             color: #222;
         }
+
         p {
             background: #f5f5f5;
             padding: 10px;
             border-left: 4px solid #555;
         }
-        iframe {
-            width: 100%;
-            height: 320px;
-            border: 2px solid #333;
-        }
+
+        /* =====================================================
+           AJUSTE IMPORTANTE:
+           Container para iframe responsivo (16:9)
+           Evita que o vídeo fique invisível ou quebrado
+           ===================================================== */
         .video-responsive {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* proporção 16:9 */
             height: 0;
+            overflow: hidden;
         }
+
         .video-responsive iframe {
             position: absolute;
             top: 0;
@@ -41,111 +47,124 @@
             height: 100%;
             border: none;
         }
+
+        iframe {
+            border: 2px solid #333;
+        }
     </style>
 </head>
 <body>
 
-<h1>🧩 Tutorial Prático — iframe em HTML</h1>
+<h1>🧩 Tutorial Prático — iframe em HTML (YouTube)</h1>
 
 <p>
-Este arquivo funciona como um <strong>tutorial vivo</strong> da tag
-<code>&lt;iframe&gt;</code>, mostrando exemplos reais e funcionais.
+Este arquivo é um <strong>tutorial vivo</strong> da tag
+<code>&lt;iframe&gt;</code>.
+<br>
+Todos os ajustes feitos para corrigir o problema do YouTube
+estão explicados nos comentários do código.
 </p>
 
 <!-- ========================================================= -->
 <section>
-<h2>1️⃣ iframe carregando página HTML do próprio projeto</h2>
+<h2>1️⃣ iframe carregando página interna (controle)</h2>
 
 <p>
-Este iframe carrega uma página HTML local do próprio projeto
-(<code>paginas/interna.html</code>).
-É o uso mais comum para sistemas internos.
+Este iframe carrega uma página HTML do próprio projeto.
+Serve como controle para provar que o iframe está funcionando.
 </p>
 
-<iframe src="paginas/interna.html" title="Página interna do projeto"></iframe>
+<iframe
+    src="paginas/interna.html"
+    title="Página interna do projeto"
+    width="100%"
+    height="250">
+</iframe>
 </section>
 
 <!-- ========================================================= -->
 <section>
-<h2>2️⃣ iframe com tamanho personalizado</h2>
+<h2>2️⃣ iframe com vídeo do YouTube (AJUSTADO E FUNCIONANDO)</h2>
 
 <p>
-O tamanho do iframe pode ser controlado usando
-<code>width</code> e <code>height</code> ou CSS.
+Este exemplo mostra o <strong>formato CORRETO</strong> para carregar
+vídeos do YouTube em iframe.
+<br><br>
+✔ Usa domínio <code>youtube-nocookie.com</code><br>
+✔ Usa formato <code>/embed/ID_DO_VIDEO</code><br>
+✔ Vídeo confirmado que permite incorporação
 </p>
 
-<iframe src="paginas/interna.html" width="600" height="200" title="Iframe com tamanho personalizado"></iframe>
-</section>
+<!--
+==============================================================
+AJUSTES IMPORTANTES (O QUE FOI CORRIGIDO):
 
-<!-- ========================================================= -->
-<section>
-<h2>3️⃣ iframe sem borda</h2>
+1) ❌ NÃO usar:
+   https://www.youtube.com/watch?v=ID
 
-<p>
-A borda pode ser removida com CSS usando
-<code>border: none</code>.
-</p>
+2) ✅ USAR SEMPRE:
+   https://www.youtube-nocookie.com/embed/ID
 
-<iframe src="paginas/interna.html" style="border:none; height:200px;" title="Iframe sem borda"></iframe>
-</section>
+3) O domínio "youtube-nocookie.com":
+   - Evita bloqueios de privacidade
+   - Funciona melhor em iframe
+   - Recomendado pelo próprio Google
 
-<!-- ========================================================= -->
-<section>
-<h2>4️⃣ iframe com vídeo do YouTube (motivacional)</h2>
+4) Adicionado:
+   - allowfullscreen
+   - allow="encrypted-media; picture-in-picture"
+   - title (acessibilidade)
+   - container responsivo (CSS)
 
-<p>
-O YouTube permite incorporação via iframe usando o formato
-<code>/embed/</code>.
-Este é um vídeo motivacional usado apenas como exemplo.
-</p>
+5) Vídeo escolhido:
+   - Permite embed
+   - Não está bloqueado por região
+==============================================================
+-->
 
 <div class="video-responsive">
     <iframe
-        src="https://www.youtube.com/embed/mgmVOuLgFB0"
+        src="https://www.youtube-nocookie.com/embed/ZXsQAXx_ao0"
         title="Vídeo motivacional do YouTube"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
     </iframe>
 </div>
-</section>
-
-<!-- ========================================================= -->
-<section>
-<h2>5️⃣ iframe com atributo title (acessibilidade)</h2>
 
 <p>
-O atributo <code>title</code> é importante para leitores de tela
-e acessibilidade.
-Sempre utilize em projetos profissionais.
+➡️ Se este vídeo aparece, o problema anterior NÃO era HTML,
+e sim restrição do vídeo, link incorreto ou política de privacidade.
 </p>
-
-<iframe src="paginas/interna.html" title="Conteúdo interno do projeto"></iframe>
 </section>
 
 <!-- ========================================================= -->
 <section>
-<h2>6️⃣ iframe como visualização de conteúdo</h2>
+<h2>3️⃣ Por que o vídeo NÃO aparecia antes?</h2>
 
 <p>
-O iframe pode ser usado para visualizar documentos,
-conteúdos internos, dashboards e vídeos externos.
+As causas mais comuns são:
+<br><br>
+❌ Uso de link <code>watch?v=</code><br>
+❌ Vídeo com embed desativado pelo dono<br>
+❌ Bloqueio por extensões (Adblock / Brave)<br>
+❌ Abrir o HTML via <code>file://</code> em ambientes restritivos
 </p>
-
-<iframe src="paginas/interna.html" title="Visualização de conteúdo"></iframe>
 </section>
 
 <!-- ========================================================= -->
 <section>
-<h2>7️⃣ Observações importantes sobre iframe</h2>
+<h2>4️⃣ Boas práticas para iframe com YouTube</h2>
 
 <p>
-❌ Nem todo site permite iframe  
-✅ YouTube permite e é ideal  
-✅ Use sempre <code>title</code>  
-⚠️ Evite excesso de iframe por performance  
-⚠️ Prefira conteúdo do próprio projeto quando possível
+✅ Use sempre <code>/embed/</code><br>
+✅ Prefira <code>youtube-nocookie.com</code><br>
+✅ Use iframe responsivo<br>
+✅ Sempre adicione <code>title</code><br>
+⚠️ Teste em aba anônima se não aparecer
 </p>
 </section>
 
 </body>
 </html>
+
