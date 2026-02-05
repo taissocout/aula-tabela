@@ -4,169 +4,199 @@
     <meta charset="UTF-8">
     <title>Tutorial Completo de Áudio em HTML</title>
 
-    <!--
-        IMPORTANTE:
-        charset UTF-8 garante que símbolos, acentos e emojis funcionem corretamente
-    -->
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        h1, h2 {
+            color: #222;
+        }
+        p {
+            background: #f5f5f5;
+            padding: 10px;
+            border-left: 4px solid #555;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- ========================================================= -->
-    <!-- 🎧 TUTORIAL COMPLETO: TAG <audio> EM HTML                  -->
-    <!-- ========================================================= -->
+<h1>🎧 Tutorial Prático — Áudio em HTML</h1>
 
-    <h1>🎧 Tutorial de Áudio em HTML</h1>
+<p>
+Este arquivo funciona como um <strong>tutorial vivo</strong>.  
+Cada seção explica um uso diferente da tag <code>&lt;audio&gt;</code>.
+</p>
 
-    <!-- ========================================================= -->
-    <!-- 1️⃣ EXEMPLO BÁSICO COM CONTROLES                           -->
-    <!-- ========================================================= -->
-    <!--
-        controls  → mostra botões de play, pause e volume
-        src       → caminho do arquivo de áudio
-    -->
-    <audio src="audio/som.mp3" controls></audio>
+<!-- ========================================================= -->
+<section>
+<h2>1️⃣ Áudio básico com controles</h2>
 
+<p>
+Este é o uso mais simples da tag <code>&lt;audio&gt;</code>.  
+O atributo <strong>controls</strong> exibe play, pause e volume.
+</p>
 
-    <!-- ========================================================= -->
-    <!-- 2️⃣ FORMA CORRETA (COM <source>)                           -->
-    <!-- ========================================================= -->
-    <!--
-        Usar <source> permite vários formatos
-        O navegador escolhe o que ele suporta
-    -->
-    <audio controls>
-        <source src="audio/som.mp3" type="audio/mpeg">
-        <source src="audio/som.ogg" type="audio/ogg">
-        Seu navegador não suporta áudio.
-    </audio>
+<audio src="audio/meu-audio.mp3" controls></audio>
+</section>
 
+<!-- ========================================================= -->
+<section>
+<h2>2️⃣ Forma recomendada (usando &lt;source&gt;)</h2>
 
-    <!-- ========================================================= -->
-    <!-- 3️⃣ AUTOPLAY (⚠️ BLOQUEADO SE NÃO ESTIVER MUTED)           -->
-    <!-- ========================================================= -->
-    <!--
-        autoplay → tenta iniciar sozinho
-        muted    → OBRIGATÓRIO para autoplay funcionar nos navegadores
-    -->
-    <audio autoplay muted>
-        <source src="audio/som.mp3" type="audio/mpeg">
-    </audio>
+<p>
+A forma correta de trabalhar com áudio é usando a tag
+<code>&lt;source&gt;</code>, permitindo vários formatos.
+O navegador escolhe automaticamente o compatível.
+</p>
 
+<audio controls>
+    <source src="audio/meu-audio.mp3" type="audio/mpeg">
+    <source src="audio/meu-audio.ogg" type="audio/ogg">
+    Seu navegador não suporta áudio.
+</audio>
+</section>
 
-    <!-- ========================================================= -->
-    <!-- 4️⃣ LOOP (REPETE INFINITAMENTE)                            -->
-    <!-- ========================================================= -->
-    <!--
-        loop → quando o áudio termina, recomeça
-        Muito usado para música de fundo
-    -->
-    <audio controls loop>
-        <source src="audio/som.mp3" type="audio/mpeg">
-    </audio>
+<!-- ========================================================= -->
+<section>
+<h2>3️⃣ Autoplay (somente demonstrativo)</h2>
 
+<p>
+O atributo <strong>autoplay</strong> faz o áudio iniciar sozinho.
+⚠️ Navegadores modernos só permitem autoplay se o áudio estiver <strong>muted</strong>.
+Este exemplo está <strong>comentado</strong> apenas para estudo.
+</p>
 
-    <!-- ========================================================= -->
-    <!-- 5️⃣ PRELOAD (CONTROLE DE CARREGAMENTO)                     -->
-    <!-- ========================================================= -->
-    <!--
-        preload="auto"     → carrega tudo
-        preload="metadata" → carrega só informações (RECOMENDADO)
-        preload="none"     → só carrega ao clicar
-    -->
-    <audio controls preload="metadata">
-        <source src="audio/som.mp3" type="audio/mpeg">
-    </audio>
+<!--
+<audio autoplay muted>
+    <source src="audio/meu-audio.mp3" type="audio/mpeg">
+</audio>
+-->
+</section>
 
+<!-- ========================================================= -->
+<section>
+<h2>4️⃣ Loop (repetição infinita — demonstrativo)</h2>
 
-    <!-- ========================================================= -->
-    <!-- 6️⃣ ÁUDIO INVISÍVEL (SOM DE FUNDO)                         -->
-    <!-- ========================================================= -->
-    <!--
-        Sem controls → não aparece na tela
-        Ideal para jogos e ambientes interativos
-    -->
-    <audio autoplay loop muted>
-        <source src="audio/som.mp3" type="audio/mpeg">
-    </audio>
+<p>
+O atributo <strong>loop</strong> faz o áudio repetir infinitamente.
+Muito usado para música de fundo.
+Este exemplo está comentado apenas para demonstração.
+</p>
 
+<!--
+<audio controls loop>
+    <source src="audio/meu-audio.mp3" type="audio/mpeg">
+</audio>
+-->
+</section>
 
-    <!-- ========================================================= -->
-    <!-- 7️⃣ CONTROLE VIA JAVASCRIPT                                -->
-    <!-- ========================================================= -->
-    <!--
-        O áudio recebe um ID para ser controlado pelo JS
-    -->
-    <audio id="meuAudio">
-        <source src="audio/som.mp3" type="audio/mpeg">
-    </audio>
+<!-- ========================================================= -->
+<section>
+<h2>5️⃣ Preload (controle de carregamento)</h2>
 
-    <button onclick="playAudio()">Play</button>
-    <button onclick="pauseAudio()">Pause</button>
+<p>
+O atributo <strong>preload</strong> controla quando o áudio é carregado:
+<br>• <code>auto</code> → carrega tudo
+<br>• <code>metadata</code> → carrega apenas informações (recomendado)
+<br>• <code>none</code> → carrega só ao clicar
+</p>
 
-    <script>
-        /*
-            Métodos importantes:
-            play()        → toca o áudio
-            pause()       → pausa
-            volume        → 0.0 a 1.0
-            currentTime   → pula para um segundo específico
-            loop          → true / false
-            muted         → true / false
-        */
+<audio controls preload="metadata">
+    <source src="audio/meu-audio.mp3" type="audio/mpeg">
+</audio>
+</section>
 
-        const audio = document.getElementById("meuAudio");
+<!-- ========================================================= -->
+<section>
+<h2>6️⃣ Áudio invisível (som de fundo)</h2>
 
-        function playAudio() {
-            audio.play();
-        }
+<p>
+Quando o atributo <strong>controls</strong> não é usado,
+o áudio não aparece na tela.
+Muito comum em jogos e experiências interativas.
+</p>
 
-        function pauseAudio() {
-            audio.pause();
-        }
+<audio>
+    <source src="audio/meu-audio.mp3" type="audio/mpeg">
+</audio>
+</section>
 
-        // Exemplos extras (comentados):
-        // audio.volume = 0.5;
-        // audio.currentTime = 10;
-        // audio.loop = true;
-        // audio.muted = false;
-    </script>
+<!-- ========================================================= -->
+<section>
+<h2>7️⃣ Controle de áudio com JavaScript</h2>
 
+<p>
+Aqui o áudio recebe um <strong>id</strong> e é controlado por botões.
+O JavaScript permite controle total: play, pause, volume, tempo etc.
+</p>
 
-    <!-- ========================================================= -->
-    <!-- 8️⃣ EVENTOS DO ÁUDIO                                      -->
-    <!-- ========================================================= -->
-    <!--
-        Eventos úteis:
-        play        → quando começa
-        pause       → quando pausa
-        ended       → quando termina
-        timeupdate  → enquanto toca
-    -->
-    <script>
-        audio.addEventListener("play", () => {
-            console.log("Áudio iniciou");
-        });
+<audio id="meuAudio">
+    <source src="audio/meu-audio.mp3" type="audio/mpeg">
+</audio>
 
-        audio.addEventListener("ended", () => {
-            console.log("Áudio terminou");
-        });
-    </script>
+<br><br>
+<button onclick="playAudio()">▶ Play</button>
+<button onclick="pauseAudio()">⏸ Pause</button>
 
+<script>
+    const audio = document.getElementById("meuAudio");
 
-    <!-- ========================================================= -->
-    <!-- 9️⃣ PEGADINHAS IMPORTANTES                                 -->
-    <!-- ========================================================= -->
-    <!--
-        ❌ Autoplay sem muted NÃO funciona
-        ❌ Caminho errado (audio/ ≠ Audio/)
-        ❌ Formato não suportado
-        ✅ MP3 é o mais compatível
-    -->
+    function playAudio() {
+        audio.play();
+    }
 
+    function pauseAudio() {
+        audio.pause();
+    }
 
-    <!-- ========================================================= -->
-    <!-- 🔚 FIM DO TUTORIAL                                        -->
-    <!-- ========================================================= -->
+    // Exemplos extras (desativados):
+    // audio.volume = 0.5;
+    // audio.currentTime = 10;
+    // audio.loop = true;
+    // audio.muted = false;
+</script>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>8️⃣ Eventos do áudio</h2>
+
+<p>
+Eventos permitem detectar ações do usuário ou do áudio:
+<br>• <code>play</code> → quando inicia
+<br>• <code>pause</code> → quando pausa
+<br>• <code>ended</code> → quando termina
+</p>
+
+<script>
+    audio.addEventListener("play", () => {
+        console.log("Áudio iniciou");
+    });
+
+    audio.addEventListener("ended", () => {
+        console.log("Áudio terminou");
+    });
+</script>
+</section>
+
+<!-- ========================================================= -->
+<section>
+<h2>9️⃣ Observações importantes</h2>
+
+<p>
+❌ Autoplay sem <code>muted</code> não funciona  
+❌ Caminhos errados quebram o áudio (<code>audio/</code> ≠ <code>Audio/</code>)  
+✅ MP3 é o formato mais compatível  
+✅ Use <code>&lt;source&gt;</code> sempre que possível
+</p>
+</section>
 
 </body>
 </html>
