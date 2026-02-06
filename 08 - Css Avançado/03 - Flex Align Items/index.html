@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Flexbox - Container (align-items)
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flexbox - Align Items</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Flexbox — Align Items</h1>
+
+      <p class="subtitulo">
+        <code>align-items</code> controla o alinhamento dos itens
+        no <strong>eixo cruzado (cross-axis)</strong>.
+      </p>
+
+      <p class="explicacao">
+        ⚠️ Neste exemplo usamos <code>flex-direction: row</code>,
+        então o alinhamento acontece <strong>na vertical</strong>.
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) stretch (padrão)
+         ======================================================= -->
+    <section class="card">
+      <h2>1) align-items: stretch (padrão)</h2>
+
+      <p class="explicacao">
+        Os itens esticam para ocupar toda a altura do container
+        (se não tiverem altura fixa).
+      </p>
+
+      <div class="flex ai-stretch">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         2) flex-start
+         ======================================================= -->
+    <section class="card">
+      <h2>2) align-items: flex-start</h2>
+
+      <p class="explicacao">
+        Alinha os itens no início do eixo cruzado (topo).
+      </p>
+
+      <div class="flex ai-start">
+        <div class="item tall">1</div>
+        <div class="item">2</div>
+        <div class="item tall">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         3) center
+         ======================================================= -->
+    <section class="card">
+      <h2>3) align-items: center</h2>
+
+      <p class="explicacao">
+        Centraliza os itens verticalmente.
+        <br />
+        👉 Um dos usos mais comuns no mercado.
+      </p>
+
+      <div class="flex ai-center">
+        <div class="item tall">1</div>
+        <div class="item">2</div>
+        <div class="item tall">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         4) flex-end
+         ======================================================= -->
+    <section class="card">
+      <h2>4) align-items: flex-end</h2>
+
+      <p class="explicacao">
+        Empurra os itens para o final do eixo cruzado (base).
+      </p>
+
+      <div class="flex ai-end">
+        <div class="item tall">1</div>
+        <div class="item">2</div>
+        <div class="item tall">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         5) baseline
+         ======================================================= -->
+    <section class="card">
+      <h2>5) align-items: baseline</h2>
+
+      <p class="explicacao">
+        Alinha os itens pela <strong>linha base do texto</strong>.
+        <br />
+        👉 Útil quando textos têm tamanhos diferentes.
+      </p>
+
+      <div class="flex ai-baseline">
+        <div class="item text-sm">Pequeno</div>
+        <div class="item text-md">Médio</div>
+        <div class="item text-lg">Grande</div>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        Regra fixa:
+        <br />
+        <code>justify-content</code> → eixo principal
+        <br />
+        <code>align-items</code> → eixo cruzado
+      </p>
+    </footer>
+  </main>
+</body>
+
+</html>
