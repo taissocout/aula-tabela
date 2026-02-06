@@ -1,0 +1,157 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: Flexbox - Items (Grow / Basis / Shrink)
+   ========================================================= */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Cards */
+.card {
+  background: #171a21;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card.destaque {
+  border-color: #66a6ff;
+}
+
+.card.real {
+  border-color: #4ade80;
+}
+
+.topo h1 {
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.alerta {
+  background: #0b0d12;
+  border-left: 4px solid #facc15;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.explicacao {
+  margin-bottom: 10px;
+}
+
+.nota {
+  margin-top: 8px;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   FLEX BASE
+   ========================================================= */
+.flex {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #10131a;
+  border: 1px dashed #2a2f3a;
+  border-radius: 10px;
+}
+
+.flex.narrow {
+  width: 360px;
+  /* força falta de espaço */
+}
+
+.item {
+  background: #66a6ff;
+  color: #0f1115;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FLEX-BASIS
+   ========================================================= */
+.basis-100 {
+  flex-basis: 100px;
+}
+
+.basis-200 {
+  flex-basis: 200px;
+}
+
+.basis-300 {
+  flex-basis: 300px;
+}
+
+/* =========================================================
+   FLEX-GROW
+   ========================================================= */
+.grow-1 {
+  flex-grow: 1;
+}
+
+.grow-2 {
+  flex-grow: 2;
+}
+
+/* =========================================================
+   FLEX-SHRINK
+   ========================================================= */
+.shrink-1 {
+  flex-shrink: 1;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   EXEMPLO REAL
+   ========================================================= */
+.layout {
+  height: 80px;
+}
+
+.sidebar {
+  flex-basis: 160px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background: #c084fc;
+}
+
+.content {
+  flex-basis: 0;
+  flex-grow: 1;
+  background: #4ade80;
+}
+
+/* Rodapé */
+.rodape {
+  opacity: 0.85;
+  margin-top: 16px;
+}

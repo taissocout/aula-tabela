@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Flexbox - Items (grow, basis, shrink)
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flexbox - Items (Grow / Basis / Shrink)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Flexbox — Items</h1>
+
+      <p class="subtitulo">
+        Aqui você aprende como os ITENS crescem, encolhem e definem
+        seu tamanho inicial dentro de um container flex.
+      </p>
+
+      <p class="alerta">
+        🧠 Ordem mental do Flexbox:<br>
+        <strong>basis → grow → shrink</strong>
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) flex-basis
+         ======================================================= -->
+    <section class="card">
+      <h2>1) flex-basis (tamanho inicial)</h2>
+
+      <p class="explicacao">
+        🔹 <code>flex-basis</code> define o tamanho BASE do item antes
+        de grow ou shrink.
+        <br>
+        🔹 Funciona como um <code>width</code>, mas específico do Flexbox.
+      </p>
+
+      <div class="flex">
+        <div class="item basis-100">basis: 100px</div>
+        <div class="item basis-200">basis: 200px</div>
+        <div class="item basis-300">basis: 300px</div>
+      </div>
+
+      <p class="nota">
+        📌 Mesmo com tamanhos diferentes, eles ainda são flex-items.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         2) flex-grow
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>2) flex-grow (quem cresce)</h2>
+
+      <p class="explicacao">
+        🔹 <code>flex-grow</code> define QUEM cresce quando sobra espaço.
+        <br>
+        🔹 O valor é uma PROPORÇÃO, não porcentagem.
+      </p>
+
+      <div class="flex">
+        <div class="item grow-1">grow: 1</div>
+        <div class="item grow-2">grow: 2</div>
+        <div class="item grow-1">grow: 1</div>
+      </div>
+
+      <p class="nota">
+        📌 O item do meio cresce o DOBRO dos outros.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         3) flex-shrink
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>3) flex-shrink (quem encolhe)</h2>
+
+      <p class="explicacao">
+        🔹 <code>flex-shrink</code> define QUEM encolhe quando falta espaço.
+        <br>
+        🔹 <code>shrink: 0</code> = NÃO encolhe.
+      </p>
+
+      <div class="flex narrow">
+        <div class="item shrink-1">shrink: 1</div>
+        <div class="item shrink-0">shrink: 0</div>
+        <div class="item shrink-1">shrink: 1</div>
+      </div>
+
+      <p class="nota">
+        📌 O item do meio mantém o tamanho, os outros encolhem.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         4) Combinação real (layout clássico)
+         ======================================================= -->
+    <section class="card real">
+      <h2>4) Exemplo real de mercado</h2>
+
+      <p class="explicacao">
+        🔹 Layout clássico: sidebar + conteúdo.
+        <br>
+        🔹 Sidebar NÃO cresce, conteúdo cresce tudo.
+      </p>
+
+      <div class="flex layout">
+        <div class="item sidebar">Sidebar</div>
+        <div class="item content">Conteúdo principal</div>
+      </div>
+
+      <p class="nota">
+        📌 Isso aqui aparece em dashboards, sistemas e painéis administrativos.
+      </p>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        🧠 Regra final:
+        <br>
+        <code>flex-basis</code> → tamanho inicial<br>
+        <code>flex-grow</code> → sobra espaço<br>
+        <code>flex-shrink</code> → falta espaço
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
