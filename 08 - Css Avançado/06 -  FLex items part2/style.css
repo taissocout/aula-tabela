@@ -1,0 +1,165 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: Flexbox - Items Avançado
+   ========================================================= */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Cards */
+.card {
+  background: #171a21;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card.destaque {
+  border-color: #66a6ff;
+}
+
+.card.real {
+  border-color: #4ade80;
+}
+
+.topo h1 {
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.alerta {
+  background: #0b0d12;
+  border-left: 4px solid #facc15;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.explicacao {
+  margin-bottom: 10px;
+}
+
+.nota {
+  margin-top: 8px;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   FLEX BASE
+   ========================================================= */
+.flex {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #10131a;
+  border: 1px dashed #2a2f3a;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.item {
+  background: #66a6ff;
+  color: #0f1115;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FLEX (SHORTHAND)
+   ========================================================= */
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+/* =========================================================
+   ORDER
+   ========================================================= */
+.order-0 {
+  order: 0;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+/* =========================================================
+   ALIGN-SELF
+   ========================================================= */
+.align-demo {
+  height: 120px;
+  align-items: stretch;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+/* =========================================================
+   EXEMPLO REAL
+   ========================================================= */
+.header {
+  height: 80px;
+}
+
+.logo {
+  flex: 0 0 120px;
+  background: #c084fc;
+}
+
+.menu {
+  flex: 1;
+  background: #4ade80;
+}
+
+.cta {
+  flex: 0;
+  align-self: flex-end;
+  background: #fb7185;
+}
+
+/* Rodapé */
+.rodape {
+  opacity: 0.85;
+  margin-top: 16px;
+}

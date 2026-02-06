@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Flexbox - Items (flex / order / align-self)
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flexbox - Items Avançado</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Flexbox — Items Avançado</h1>
+
+      <p class="subtitulo">
+        Aqui você aprende como controlar tamanho, ordem e alinhamento
+        de CADA item individualmente.
+      </p>
+
+      <p class="alerta">
+        🧠 Lembrete mental:<br>
+        <strong>container organiza · item personaliza</strong>
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) flex (shorthand)
+         ======================================================= -->
+    <section class="card">
+      <h2>1) flex (shorthand)</h2>
+
+      <p class="explicacao">
+        🔹 <code>flex</code> é o atalho para <code>grow</code>, <code>shrink</code> e <code>basis</code>.
+        <br>
+        🔹 É o jeito MAIS usado por devs.
+      </p>
+
+      <div class="flex">
+        <div class="item flex-1">flex: 1</div>
+        <div class="item flex-2">flex: 2</div>
+        <div class="item flex-1">flex: 1</div>
+      </div>
+
+      <p class="nota">
+        📌 O item do meio ocupa o DOBRO do espaço.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         2) order
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>2) order (ordem visual)</h2>
+
+      <p class="explicacao">
+        🔹 Muda a ordem visual sem mexer no HTML.
+        <br>
+        🔹 Muito usado para layout responsivo.
+      </p>
+
+      <div class="flex">
+        <div class="item order-2">Item 1 (order:2)</div>
+        <div class="item order-1">Item 2 (order:1)</div>
+        <div class="item order-0">Item 3 (order:0)</div>
+      </div>
+
+      <p class="nota">
+        📌 O HTML continua 1–2–3, mas a tela muda.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         3) align-self
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>3) align-self (item individual)</h2>
+
+      <p class="explicacao">
+        🔹 Sobrescreve o <code>align-items</code> do container.
+        <br>
+        🔹 Controla UM item só.
+      </p>
+
+      <div class="flex align-demo">
+        <div class="item">Normal</div>
+        <div class="item self-start">self-start</div>
+        <div class="item self-center">self-center</div>
+        <div class="item self-end">self-end</div>
+      </div>
+
+      <p class="nota">
+        📌 Ideal para botões, cards ou destaques fora do padrão.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         4) Exemplo real de mercado
+         ======================================================= -->
+    <section class="card real">
+      <h2>4) Exemplo real (Header)</h2>
+
+      <p class="explicacao">
+        🔹 Logo à esquerda<br>
+        🔹 Menu cresce<br>
+        🔹 Botão alinhado embaixo (CTA)
+      </p>
+
+      <div class="flex header">
+        <div class="item logo">LOGO</div>
+        <div class="item menu">Menu</div>
+        <div class="item cta">Entrar</div>
+      </div>
+
+      <p class="nota">
+        📌 Esse padrão aparece em quase TODO site profissional.
+      </p>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        🧠 Resumo final:<br>
+        <code>flex</code> → tamanho do item<br>
+        <code>order</code> → ordem visual<br>
+        <code>align-self</code> → alinhamento individual
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
