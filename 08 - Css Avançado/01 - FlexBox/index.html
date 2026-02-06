@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Flexbox - Container (direction, wrap, flow)
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flexbox - Container</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Flexbox — Container</h1>
+
+      <p class="subtitulo">
+        Neste estudo vamos focar APENAS no container Flexbox:
+        <code>flex-direction</code>, <code>flex-wrap</code> e <code>flex-flow</code>.
+      </p>
+
+      <p class="explicacao">
+        ✅ Flexbox funciona em dois eixos:
+        <br />
+        • eixo principal (main-axis)
+        <br />
+        • eixo cruzado (cross-axis)
+        <br />
+        👉 A direção do eixo principal depende do <code>flex-direction</code>.
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) flex-direction
+         ======================================================= -->
+    <section class="card">
+      <h2>1) flex-direction</h2>
+
+      <p class="explicacao">
+        Define a direção dos itens dentro do container.
+        <br />
+        Valores mais usados:
+        <br />
+        • <code>row</code> (padrão)
+        <br />
+        • <code>row-reverse</code>
+        <br />
+        • <code>column</code>
+        <br />
+        • <code>column-reverse</code>
+      </p>
+
+      <div class="flex direction-row">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+
+      <p class="dica">
+        🔹 <strong>row</strong>: itens em linha (horizontal).
+      </p>
+
+      <div class="flex direction-column">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+      </div>
+
+      <p class="dica">
+        🔹 <strong>column</strong>: itens em coluna (vertical).
+      </p>
+    </section>
+
+    <!-- =======================================================
+         2) flex-wrap
+         ======================================================= -->
+    <section class="card">
+      <h2>2) flex-wrap</h2>
+
+      <p class="explicacao">
+        Controla se os itens podem “quebrar linha”.
+        <br />
+        Valores:
+        <br />
+        • <code>nowrap</code> (padrão)
+        <br />
+        • <code>wrap</code>
+        <br />
+        • <code>wrap-reverse</code>
+      </p>
+
+      <div class="flex wrap-nowrap">
+        <div class="item wide">1</div>
+        <div class="item wide">2</div>
+        <div class="item wide">3</div>
+        <div class="item wide">4</div>
+      </div>
+
+      <p class="dica">
+        🔹 <strong>nowrap</strong>: os itens não quebram linha (podem estourar).
+      </p>
+
+      <div class="flex wrap">
+        <div class="item wide">1</div>
+        <div class="item wide">2</div>
+        <div class="item wide">3</div>
+        <div class="item wide">4</div>
+      </div>
+
+      <p class="dica">
+        🔹 <strong>wrap</strong>: os itens quebram para a próxima linha.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         3) flex-flow (atalho)
+         ======================================================= -->
+    <section class="card">
+      <h2>3) flex-flow (direction + wrap)</h2>
+
+      <p class="explicacao">
+        <code>flex-flow</code> é um atalho:
+        <br />
+        👉 <code>flex-flow: direction wrap;</code>
+        <br />
+        Muito usado por devs para deixar o CSS mais limpo.
+      </p>
+
+      <div class="flex flow">
+        <div class="item wide">1</div>
+        <div class="item wide">2</div>
+        <div class="item wide">3</div>
+        <div class="item wide">4</div>
+        <div class="item wide">5</div>
+      </div>
+
+      <p class="dica">
+        🔹 Aqui usamos <code>flex-flow: row wrap</code>.
+      </p>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        Dica de dev: 90% dos layouts usam
+        <code>display: flex</code> +
+        <code>flex-direction: row</code> +
+        <code>flex-wrap: wrap</code>.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>

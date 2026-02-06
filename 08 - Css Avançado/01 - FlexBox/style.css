@@ -1,0 +1,125 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: Flexbox - Container
+   ========================================================= */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+/* Layout base */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #171a21;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.topo h1 {
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.explicacao {
+  margin-bottom: 12px;
+}
+
+.dica {
+  margin: 10px 0 16px;
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+code {
+  background: #0b0d12;
+  border: 1px solid #2a2f3a;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   FLEX CONTAINER BASE
+   ========================================================= */
+.flex {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background: #10131a;
+  border-radius: 10px;
+  border: 1px dashed #2a2f3a;
+  margin-bottom: 8px;
+}
+
+/* Itens */
+.item {
+  width: 60px;
+  height: 60px;
+  background: #66a6ff;
+  color: #0f1115;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Item maior para wrap */
+.item.wide {
+  width: 140px;
+}
+
+/* =========================================================
+   1) flex-direction
+   ========================================================= */
+.direction-row {
+  flex-direction: row;
+}
+
+.direction-column {
+  flex-direction: column;
+}
+
+/* =========================================================
+   2) flex-wrap
+   ========================================================= */
+.wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   3) flex-flow (atalho)
+   ========================================================= */
+.flow {
+  flex-flow: row wrap;
+}
+
+/* Rodapé */
+.rodape {
+  opacity: 0.85;
+  margin-top: 12px;
+}
