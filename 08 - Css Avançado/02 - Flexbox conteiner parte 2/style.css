@@ -1,0 +1,111 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: Flexbox - Justify Content
+   ========================================================= */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.card {
+  background: #171a21;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.topo h1 {
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  opacity: 0.85;
+  margin-bottom: 12px;
+}
+
+.explicacao {
+  margin-bottom: 12px;
+}
+
+code {
+  background: #0b0d12;
+  border: 1px solid #2a2f3a;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* =========================================================
+   FLEX CONTAINER BASE
+   ========================================================= */
+.flex {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #10131a;
+  border: 1px dashed #2a2f3a;
+  border-radius: 10px;
+}
+
+/* Itens */
+.item {
+  width: 80px;
+  height: 50px;
+  background: #66a6ff;
+  color: #0f1115;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* =========================================================
+   JUSTIFY-CONTENT
+   ========================================================= */
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-around {
+  justify-content: space-around;
+}
+
+.jc-evenly {
+  justify-content: space-evenly;
+}
+
+/* Rodapé */
+.rodape {
+  opacity: 0.85;
+  margin-top: 12px;
+}

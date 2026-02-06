@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Flexbox - Container (justify-content)
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flexbox - Justify Content</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Flexbox — Justify Content</h1>
+
+      <p class="subtitulo">
+        <code>justify-content</code> alinha os itens ao longo do
+        <strong>eixo principal (main-axis)</strong>.
+      </p>
+
+      <p class="explicacao">
+        ⚠️ Importante:
+        <br />
+        👉 Se <code>flex-direction: row</code>, o eixo principal é <strong>horizontal</strong>.
+        <br />
+        👉 Se <code>flex-direction: column</code>, o eixo principal é <strong>vertical</strong>.
+      </p>
+    </header>
+
+    <!-- =======================================================
+         1) flex-start (padrão)
+         ======================================================= -->
+    <section class="card">
+      <h2>1) justify-content: flex-start (padrão)</h2>
+
+      <p class="explicacao">
+        Os itens ficam grudados no início do eixo principal.
+        <br />
+        👉 Esse é o comportamento padrão do Flexbox.
+      </p>
+
+      <div class="flex jc-start">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         2) center
+         ======================================================= -->
+    <section class="card">
+      <h2>2) justify-content: center</h2>
+
+      <p class="explicacao">
+        Centraliza os itens no eixo principal.
+        <br />
+        👉 Muito usado para botões, cards e layouts simples.
+      </p>
+
+      <div class="flex jc-center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         3) flex-end
+         ======================================================= -->
+    <section class="card">
+      <h2>3) justify-content: flex-end</h2>
+
+      <p class="explicacao">
+        Empurra os itens para o final do eixo principal.
+        <br />
+        👉 Usado em menus, ações à direita, rodapés.
+      </p>
+
+      <div class="flex jc-end">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         4) space-between
+         ======================================================= -->
+    <section class="card">
+      <h2>4) justify-content: space-between</h2>
+
+      <p class="explicacao">
+        Primeiro item vai para o início, último para o fim,
+        e o espaço é distribuído entre eles.
+        <br />
+        👉 Muito comum em headers (logo à esquerda, menu à direita).
+      </p>
+
+      <div class="flex jc-between">
+        <div class="item">Logo</div>
+        <div class="item">Menu</div>
+        <div class="item">Login</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         5) space-around
+         ======================================================= -->
+    <section class="card">
+      <h2>5) justify-content: space-around</h2>
+
+      <p class="explicacao">
+        O espaço fica ao redor dos itens.
+        <br />
+        👉 As bordas também recebem espaço (menor que o do meio).
+      </p>
+
+      <div class="flex jc-around">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         6) space-evenly
+         ======================================================= -->
+    <section class="card">
+      <h2>6) justify-content: space-evenly</h2>
+
+      <p class="explicacao">
+        O espaço entre os itens e as bordas é exatamente igual.
+        <br />
+        👉 Visualmente o mais equilibrado.
+      </p>
+
+      <div class="flex jc-evenly">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        Regra de ouro:
+        <br />
+        <code>justify-content</code> → eixo principal
+        <br />
+        <code>align-items</code> → eixo cruzado
+      </p>
+    </footer>
+  </main>
+</body>
+
+</html>
