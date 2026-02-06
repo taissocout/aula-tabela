@@ -1,0 +1,134 @@
+/* =========================================================
+   Código criado por dev, corrigido com IA e feito em vibe coding 😄
+   Tema: Flexbox - Align Content (COMPLETO)
+   ========================================================= */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f1115;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Cards */
+.card {
+  background: #171a21;
+  border: 1px solid #2a2f3a;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.card.destaque {
+  border-color: #66a6ff;
+}
+
+.card.info {
+  background: #10131a;
+  font-size: 0.95em;
+}
+
+.topo h1 {
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.alerta {
+  background: #0b0d12;
+  border-left: 4px solid #fb7185;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95em;
+}
+
+.explicacao {
+  margin-bottom: 10px;
+}
+
+.nota {
+  margin-top: 8px;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* =========================================================
+   FLEX BASE (ESSENCIAL)
+   ========================================================= */
+.flex {
+  display: flex;
+  flex-wrap: wrap;       /* OBRIGATÓRIO */
+  height: 240px;         /* espaço para alinhar linhas */
+  gap: 8px;
+  padding: 12px;
+  background: #10131a;
+  border: 1px dashed #2a2f3a;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Linhas guia */
+.demo::before,
+.demo::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.demo::before {
+  top: 0;
+}
+
+.demo::after {
+  bottom: 0;
+}
+
+/* Itens */
+.item {
+  width: 140px;
+  height: 40px;
+  background: #66a6ff;
+  color: #0f1115;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85em;
+}
+
+/* =========================================================
+   ALIGN-CONTENT
+   ========================================================= */
+.ac-stretch  { align-content: stretch; }
+.ac-start    { align-content: flex-start; }
+.ac-center   { align-content: center; }
+.ac-end      { align-content: flex-end; }
+.ac-between  { align-content: space-between; }
+.ac-around   { align-content: space-around; }
+.ac-evenly   { align-content: space-evenly; }
+
+/* Rodapé */
+.rodape {
+  opacity: 0.85;
+  margin-top: 16px;
+}

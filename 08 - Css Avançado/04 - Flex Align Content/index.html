@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!--
+    Código criado por dev, corrigido com IA e feito em vibe coding 😄
+    Tema: Flexbox - Container (align-content)
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Flexbox - Align Content (Completo)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <header class="topo">
+      <h1>Flexbox — Align Content</h1>
+
+      <p class="subtitulo">
+        <code>align-content</code> alinha as <strong>LINHAS</strong> de itens
+        no eixo cruzado (cross-axis).
+      </p>
+
+      <p class="alerta">
+        ⚠️ <strong>Regras obrigatórias:</strong><br>
+        • precisa de <code>flex-wrap: wrap</code><br>
+        • precisa de mais de uma linha<br>
+        • se não tiver isso, <code>align-content</code> NÃO FUNCIONA
+      </p>
+    </header>
+
+    <!-- =======================================================
+         BASE VISUAL
+         ======================================================= -->
+    <section class="card info">
+      <p>
+        📌 As linhas guias (topo e base) ajudam a enxergar onde o espaço está sendo distribuído.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         STRETCH
+         ======================================================= -->
+    <section class="card">
+      <h2>1) align-content: stretch (padrão)</h2>
+
+      <p class="explicacao">
+        🔹 As linhas se esticam para ocupar todo o espaço disponível.
+        <br>
+        🔹 Não sobra espaço vazio entre elas.
+      </p>
+
+      <div class="flex ac-stretch demo">
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         FLEX-START
+         ======================================================= -->
+    <section class="card">
+      <h2>2) align-content: flex-start</h2>
+
+      <p class="explicacao">
+        🔹 Todas as linhas ficam grudadas no TOPO.
+        <br>
+        🔹 Todo o espaço livre sobra embaixo.
+      </p>
+
+      <div class="flex ac-start demo">
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         CENTER
+         ======================================================= -->
+    <section class="card">
+      <h2>3) align-content: center</h2>
+
+      <p class="explicacao">
+        🔹 Todas as linhas ficam CENTRALIZADAS.
+        <br>
+        🔹 Espaço igual em cima e embaixo.
+      </p>
+
+      <div class="flex ac-center demo">
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         FLEX-END
+         ======================================================= -->
+    <section class="card">
+      <h2>4) align-content: flex-end</h2>
+
+      <p class="explicacao">
+        🔹 Todas as linhas vão para a BASE.
+        <br>
+        🔹 Todo o espaço livre fica em cima.
+      </p>
+
+      <div class="flex ac-end demo">
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3</div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+         SPACE-BETWEEN
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>5) align-content: space-between</h2>
+
+      <p class="explicacao">
+        🔹 Primeira linha encosta no TOPO<br>
+        🔹 Última linha encosta na BASE<br>
+        🔹 Espaço fica APENAS ENTRE as linhas
+      </p>
+
+      <div class="flex ac-between demo">
+        <div class="item">Linha 1 (topo)</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3 (base)</div>
+      </div>
+
+      <p class="nota">
+        ❌ Não existe espaço no topo nem na base.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         SPACE-AROUND
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>6) align-content: space-around</h2>
+
+      <p class="explicacao">
+        🔹 Cada linha tem espaço AO REDOR<br>
+        🔹 Bordas têm METADE do espaço do meio
+      </p>
+
+      <div class="flex ac-around demo">
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3</div>
+      </div>
+
+      <p class="nota">
+        📌 O espaço existe também nas bordas, mas é menor.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         SPACE-EVENLY
+         ======================================================= -->
+    <section class="card destaque">
+      <h2>7) align-content: space-evenly</h2>
+
+      <p class="explicacao">
+        🔹 Todo o espaço é IGUAL<br>
+        🔹 Entre linhas e nas bordas
+      </p>
+
+      <div class="flex ac-evenly demo">
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 1</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 2</div>
+        <div class="item">Linha 3</div>
+        <div class="item">Linha 3</div>
+      </div>
+
+      <p class="nota">
+        ✅ Visualmente o mais equilibrado.
+      </p>
+    </section>
+
+    <footer class="rodape">
+      <p>
+        🧠 <strong>Resumo final:</strong><br>
+        <code>align-items</code> → alinha ITENS<br>
+        <code>align-content</code> → alinha LINHAS
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
